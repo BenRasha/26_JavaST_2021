@@ -2,15 +2,15 @@ package entity;
 
 public class Rectangle {
 
-    private int length;
-    private int width;
+    private double length;
+    private double width;
 
-    public Rectangle (int length) {
+    public Rectangle (double length) {
         this.length = length;
         this.width = length/2;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
@@ -18,11 +18,19 @@ public class Rectangle {
         this.width = width;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                '}';
     }
 }
