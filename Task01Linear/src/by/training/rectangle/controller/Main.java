@@ -5,14 +5,14 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
 
-    static final Logger rootLogger = LogManager.getRootLogger();
+    static final Logger runnerLogger = LogManager.getLogger(Main.class.getName());
 
     public void go () {
         Runner runner = new Runner();
-        rootLogger.info("Input length of a rectangle:");
+        runnerLogger.info("Input length of a rectangle:");
         double length = runner.lengthInput();
-        rootLogger.info(length);
-        rootLogger.info(runner.areaCounter(length));
+        runnerLogger.info(length);
+        runnerLogger.info(runner.areaCounter(length));
     }
 
     public static void main (String[] args) {

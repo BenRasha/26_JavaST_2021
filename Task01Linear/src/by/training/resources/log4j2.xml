@@ -4,10 +4,16 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
+        <File name="rectangleFile" bufferedIO="true" fileName="src/by/training/resources/rectangleLog.txt">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
+        <Logger name="controller.Main" level="info" additivity="true">
+            <AppenderRef ref="rectangleFile"/>
+        </Logger>
     </Loggers>
 </Configuration>
