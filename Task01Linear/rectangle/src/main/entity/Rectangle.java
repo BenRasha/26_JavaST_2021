@@ -1,5 +1,3 @@
-package entity;
-
 public class Rectangle {
 
     private double length;

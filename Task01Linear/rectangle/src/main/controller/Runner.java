@@ -1,7 +1,3 @@
-package controller;
-
-import entity.Rectangle;
-
 import java.util.Scanner;
 
 public class Runner {
