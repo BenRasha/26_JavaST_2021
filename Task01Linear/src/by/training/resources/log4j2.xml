@@ -7,6 +7,9 @@
         <File name="rectangleFile" bufferedIO="true" fileName="src/by/training/resources/rectangleLog.txt">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
+        <File name="piPowerFile" bufferedIO="true" fileName="src/by/training/resources/piPower.txt">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="info">
@@ -14,6 +17,9 @@
         </Root>
         <Logger name="controller.Main" level="info" additivity="true">
             <AppenderRef ref="rectangleFile"/>
+        </Logger>
+        <Logger name="service.Runner" level="info" additivity="true">
+            <AppenderRef ref="piPowerFile"/>
         </Logger>
     </Loggers>
 </Configuration>
