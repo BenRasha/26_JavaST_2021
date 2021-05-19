@@ -12,7 +12,7 @@ public class Main {
         runnerLogger.info("Input length of a rectangle:");
         double length = runner.lengthInput();
         runnerLogger.info(length);
-        runnerLogger.info(runner.areaCounter(length));
+        runnerLogger.info("Area of rectangle: " + runner.areaCounter(length));
     }
 
     public static void main (String[] args) {
