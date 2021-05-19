@@ -1,0 +1,9 @@
+17:15:35.530 [main] INFO  Main - Input speed of the boat
+17:15:42.049 [main] INFO  Main - 4
+17:15:42.049 [main] INFO  Main - Input speed of the flow of the river
+17:15:45.252 [main] INFO  Main - 5
+17:15:45.252 [main] INFO  Main - Input time of the boat in a lake
+17:15:47.758 [main] INFO  Main - 6
+17:15:47.758 [main] INFO  Main - Input time, which took boat to travel against the flow
+17:15:50.533 [main] INFO  Main - 7
+17:15:50.533 [main] INFO  Main - 17
