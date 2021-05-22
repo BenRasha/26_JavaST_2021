@@ -1,5 +1,11 @@
 public class Circle {
 
+    /**
+     * This is an entity circle class with setter, getters and toString() methods.
+     * @param innerRadius stores the double value of inner radius of the circle.
+     * @param outerRadius stores the double value of outer radius of the circle.
+     */
+
     private double innerRadius;
     private double outerRadius;
 
