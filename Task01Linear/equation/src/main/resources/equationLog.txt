@@ -1,3 +1,2 @@
-17:39:59.908 [main] INFO  Main - Input x
-17:40:03.633 [main] INFO  Main - 3
-17:40:03.633 [main] INFO  Main - Answer of the equation: 108
+13:25:38.399 [main] INFO  Main - The user has entered 3 as x
+13:25:38.407 [main] INFO  Main - Answer of the equation is: 108

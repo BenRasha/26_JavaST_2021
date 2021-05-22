@@ -3,9 +3,9 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class MainTest {
+public class CounterTest {
 
-    private Main main = new Main();
+    private Counter counter = new Counter();
 
     @DataProvider(name = "dataForFirstAction")
     public Object[][] createDataForFirstAction () {
@@ -56,35 +56,35 @@ public class MainTest {
     @Test(description = "Positive scenario for first action", dataProvider = "dataForFirstAction")
     public void firstActionTest (int a, int b) {
         int expected = b;
-        int actual = main.firstAction(a);
+        int actual = counter.firstAction(a);
         assertEquals(actual, expected);
     }
 
     @Test(description = "Positive scenario for second action", dataProvider = "dataForSecondAction")
     public void secondActionTest (int a, int b) {
         int expected = b;
-        int actual = main.secondAction(a);
+        int actual = counter.secondAction(a);
         assertEquals(actual,expected);
     }
 
     @Test(description = "Positive scenario for third action", dataProvider = "dataForThirdAction")
     public void thirdActionTest (int a, int b) {
         int expected = b;
-        int actual = main.thirdAction(a);
+        int actual = counter.thirdAction(a);
         assertEquals(actual,expected);
     }
 
     @Test(description = "Positive scenario for fourth action", dataProvider = "dataForFourthAction" )
     public void fourthActionTest (int a, int b) {
         int expected = b;
-        int actual = main.fourthAction(a);
+        int actual = counter.fourthAction(a);
         assertEquals(actual,expected);
     }
 
     @Test(description = "Positive scenario for whole equation", dataProvider = "dataForWholeEquation")
     public void wholeEquationTest (int a, int b) {
         int expected = b;
-        int actual = main.wholeAnswer(a);
+        int actual = counter.wholeAnswer(a);
         assertEquals(actual,expected);
     }
 }
