@@ -1,13 +1,14 @@
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
-
 public class Runner {
 
-    static final Logger runnerLogger = LogManager.getLogger(Runner.class.getName());
+    private static final double PI = 3.14;
 
-    public static void main (String[] args) {
-        for (int i = 0;i < 5; i++) {
-            runnerLogger.info(Math.pow(Math.PI,i));
-        }
+    /**
+     * Elevates constant PI into provided power.
+     * @param power provides power, in which PI will be elevated.
+     * @return double value of PI elevation.
+     */
+
+    public static double piElevator (int power) {
+        return Math.pow(PI, power);
     }
 }

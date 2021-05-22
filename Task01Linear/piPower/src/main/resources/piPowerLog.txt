@@ -1,5 +1,5 @@
-19:56:26.544 [main] INFO  Runner - 1.0
-19:56:26.546 [main] INFO  Runner - 3.141592653589793
-19:56:26.546 [main] INFO  Runner - 9.869604401089358
-19:56:26.546 [main] INFO  Runner - 31.006276680299816
-19:56:26.546 [main] INFO  Runner - 97.40909103400242
+12:19:51.502 [main] INFO  Main - PI elevated in 0 is equal to: 1.0
+12:19:51.513 [main] INFO  Main - PI elevated in 1 is equal to: 3.14
+12:19:51.513 [main] INFO  Main - PI elevated in 2 is equal to: 9.8596
+12:19:51.513 [main] INFO  Main - PI elevated in 3 is equal to: 30.959144000000002
+12:19:51.513 [main] INFO  Main - PI elevated in 4 is equal to: 97.21171216000002
