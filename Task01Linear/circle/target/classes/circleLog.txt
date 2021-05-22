@@ -1,5 +1,0 @@
-15:51:13.359 [main] INFO  Main - Input outer radius:
-15:51:16.368 [main] INFO  Main - 5.0
-15:51:16.368 [main] INFO  Main - Input inner radius
-15:51:18.319 [main] INFO  Main - 4.0
-15:51:18.319 [main] INFO  Main - Area of a circle: 28.26
