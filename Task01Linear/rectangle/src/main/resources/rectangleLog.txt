@@ -1,3 +1,2 @@
-15:09:01.931 [main] INFO  Main - Input length of a rectangle:
-15:09:04.043 [main] INFO  Main - 4.0
-15:09:04.047 [main] INFO  Main - Area of rectangle: 12.0
+11:57:00.692 [main] INFO  Main - The user has inputted: 4.0 as the length of a rectangle.
+11:57:00.692 [main] INFO  Main - Area of rectangle: 12.0
