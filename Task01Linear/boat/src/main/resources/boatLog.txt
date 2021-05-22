@@ -1,9 +1,5 @@
-17:15:35.530 [main] INFO  Main - Input speed of the boat
-17:15:42.049 [main] INFO  Main - 4
-17:15:42.049 [main] INFO  Main - Input speed of the flow of the river
-17:15:45.252 [main] INFO  Main - 5
-17:15:45.252 [main] INFO  Main - Input time of the boat in a lake
-17:15:47.758 [main] INFO  Main - 6
-17:15:47.758 [main] INFO  Main - Input time, which took boat to travel against the flow
-17:15:50.533 [main] INFO  Main - 7
-17:15:50.533 [main] INFO  Main - 17
+13:04:57.062 [main] INFO  Main - The user has entered 4km/h as the speed of the boat
+13:04:59.593 [main] INFO  Main - The user has entered 3km/h as the speed of the river flow
+13:05:01.897 [main] INFO  Main - The user has entered 2h as the time of the boat in a lake
+13:05:03.284 [main] INFO  Main - The user has entered 1h as the time, which boat travelled against the river flow
+13:05:03.284 [main] INFO  Main - The whole way of the boat: 9

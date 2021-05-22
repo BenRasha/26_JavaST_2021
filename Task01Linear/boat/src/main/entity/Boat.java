@@ -1,5 +1,13 @@
 public class Boat {
 
+    /**
+     * This is an entity class of the boat with setters, getters and toString() methods.
+     * @param boatSpeed stores the speed of the boat by itself.
+     * @param riverSpeed stores the speed of the rivers flow.
+     * @param lakeTime stores the time, which took boat to travel without flow.
+     * @param againstFlowTime store the time, which took boat to travel against the flow.
+     */
+
     private int boatSpeed;
     private int riverSpeed;
     private int lakeTime;
