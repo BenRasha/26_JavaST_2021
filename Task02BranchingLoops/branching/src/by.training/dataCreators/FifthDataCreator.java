@@ -9,6 +9,12 @@ public class FifthDataCreator {
     final static Logger fifthDataCreatorLogger = LogManager.getLogger(FifthDataCreator.class.getName());
     ArrayList<Data>fifthTask = new ArrayList<>();
 
+    /**
+     * Used to create and validate data for the fifth task.
+     * @param fileOpener Scanner object, which let's read from file.
+     * @return array list of data, created using constructor with 1 parameter.
+     */
+
     public ArrayList<Data> createData (FileOpener fileOpener) {
         Scanner scanner = fileOpener.readFile("branching\\src\\by.training\\resources\\fifthTask.txt");
         String [] separator;

@@ -2,6 +2,7 @@ public class Data {
 
     /**
      * This is an entity class for all 5 tasks for branching. All parameters represent variables in tasks equations.
+     * Contains different constructors for each task.
      */
 
     private int x;

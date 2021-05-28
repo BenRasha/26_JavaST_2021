@@ -16,6 +16,11 @@ public class Menu {
             "6. EXIT.";
     Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Endless cycle menu, which let's user choose from 5 tasks.
+     * @throws NumbersException custom exception with constructor that's parsing String message.
+     */
+
     public void go () throws NumbersException {
         while (true) {
             System.out.println(INFO);

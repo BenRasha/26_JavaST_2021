@@ -9,6 +9,13 @@ public class SecondDataCreator {
     static final Logger secondDataCreatorLogger = LogManager.getLogger(SecondDataCreator.class.getName());
     ArrayList<Data>secondTask = new ArrayList<>();
 
+    /**
+     * Used to create and validate data for the second task
+     * @param fileOpener Scanner object, which let's read from file.
+     * @return array list with data, created using constructor with 2 parameters.
+     * @throws NumbersException custom exception with constructor that's parsing String message.
+     */
+
     public ArrayList<Data> createData (FileOpener fileOpener) throws NumbersException {
         Scanner scanner = fileOpener.readFile("branching\\src\\by.training\\resources\\secondTask.txt");
         String [] separator;

@@ -7,6 +7,11 @@ public class FitChecker {
 
     static final Logger fitCheckerLogger = LogManager.getLogger(FitChecker.class.getName());
 
+    /**
+     * Used to create a hole, length and width of which are provided by the user
+     * @return int array with two parameters
+     */
+
     public int[] createHole() {
         int []hole = new int[2];
         Scanner scanner = new Scanner(System.in);
@@ -24,6 +29,14 @@ public class FitChecker {
         }
         return hole;
     }
+
+    /**
+     * Used in task four in branching to check whether brick fits the whole
+     * @param data object from which we get all the parameters of the brick
+     * @param length is length of the hole used in comparison process
+     * @param width is width of the hole used in comparison process
+     * @return true if brick fits into a hole, and false if not
+     */
 
     public boolean checkWhetherBrickFits (Data data, int length, int width) {
         if ( ( length >= data.getX() && width >= data.getA() ) || ( length >= data.getA() && width >= data.getX() ) ) {

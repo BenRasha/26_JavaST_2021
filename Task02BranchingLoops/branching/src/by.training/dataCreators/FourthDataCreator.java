@@ -9,6 +9,13 @@ public class FourthDataCreator {
     final static Logger fourthDataCreator = LogManager.getLogger(FourthDataCreator.class.getName());
     ArrayList<Data>fourthTask = new ArrayList<>();
 
+    /**
+     * Used to create and validate data for the fourth task.
+     * @param fileOpener Scanner object, which let's read from file.
+     * @return array list of data, created using constructor with 3 parameters.
+     * @throws NumbersException custom exception with constructor that parses String message
+     */
+
     public ArrayList<Data> createData (FileOpener fileOpener) throws NumbersException {
         Scanner scanner = fileOpener.readFile("branching\\src\\by.training\\resources\\fourthTask.txt");
         String [] separator;
