@@ -11,7 +11,7 @@ public class FileOpener {
      * @return Scanner object which after can be used to read information
      */
 
-    public Scanner readFile (String source) {
+    public Scanner readFile (String source) throws FileNotFoundException{
         FileReader fileReader = null;
         try {
             File file = new File(source);

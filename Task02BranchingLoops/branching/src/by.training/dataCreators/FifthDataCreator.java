@@ -1,6 +1,7 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,7 +16,7 @@ public class FifthDataCreator {
      * @return array list of data, created using constructor with 1 parameter.
      */
 
-    public ArrayList<Data> createData (FileOpener fileOpener) {
+    public ArrayList<Data> createData (FileOpener fileOpener) throws FileNotFoundException {
         Scanner scanner = fileOpener.readFile("branching\\src\\by.training\\resources\\fifthTask.txt");
         String [] separator;
         int objectCounter = 1;

@@ -1,6 +1,7 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class Menu {
      * @throws NumbersException custom exception with constructor that's parsing String message.
      */
 
-    public void go () throws NumbersException {
+    public void go () throws NumbersException, FileNotFoundException {
         while (true) {
             System.out.println(INFO);
             int actionSelector = scanner.nextInt();

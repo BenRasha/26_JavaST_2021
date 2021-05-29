@@ -1,6 +1,7 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,7 +17,7 @@ public class FirstDataCreator {
      * @throws NumbersException custom exception with constructor that parses String message.
      */
 
-    public ArrayList<Data> createData (FileOpener fileOpener) throws NumbersException {
+    public ArrayList<Data> createData (FileOpener fileOpener) throws NumbersException, FileNotFoundException {
         Scanner scanner = fileOpener.readFile("C:\\26_JavaST_2021\\Task02BranchingLoops\\branching\\src\\by.training\\resources\\firstTask.txt");
         String [] separator;
         int counter = 1;
