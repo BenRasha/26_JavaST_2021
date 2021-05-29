@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Data {
 
     /**
@@ -64,4 +66,24 @@ public class Data {
         this.c = c;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Data data = (Data) o;
+        return x == data.x && a == data.a;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, a);
+    }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "x=" + x +
+                ", a=" + a +
+                '}';
+    }
 }
