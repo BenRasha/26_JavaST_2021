@@ -26,7 +26,7 @@ public class ArithmeticCompiler {
      * @param data object, from which we get two provided numbers
      */
 
-    public void numberReplacer (Data data) {
+    public Data numberReplacer (Data data) {
         ArithmeticCompiler arithmeticCompiler = new ArithmeticCompiler();
         int halfSum = arithmeticCompiler.halfSumFinder(data);
         int dualMul = arithmeticCompiler.dualMultiFinder(data);
@@ -37,5 +37,6 @@ public class ArithmeticCompiler {
            data.setX(dualMul);
            data.setA(halfSum);
         }
+        return data;
     }
 }
