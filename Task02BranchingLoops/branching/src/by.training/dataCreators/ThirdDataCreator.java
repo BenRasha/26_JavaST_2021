@@ -12,13 +12,13 @@ public class ThirdDataCreator {
 
     /**
      * Used to create and validate data for the third task
-     * @param fileOpener Scanner object, which let's read from file
      * @return array list with data, created using constructor with 2 parameters.
      * @throws NumbersException custom exception with constructor that's parsing String message.
      */
 
-    public ArrayList<Data> createData (FileOpener fileOpener) throws NumbersException, FileNotFoundException {
-        Scanner scanner = fileOpener.readFile("branching\\src\\by.training\\resources\\thirdTask.txt");
+    public ArrayList<Data> createData () throws NumbersException, FileNotFoundException {
+        String source = "C:\\26_JavaST_2021\\Task02BranchingLoops\\branching\\src\\by.training\\resources\\thirdTask.txt";
+        Scanner scanner = new FileOpener().readFile(source);
         String [] separator;
         int counter = 1;
         while (scanner.hasNextLine()) {

@@ -12,12 +12,12 @@ public class FifthDataCreator {
 
     /**
      * Used to create and validate data for the fifth task.
-     * @param fileOpener Scanner object, which let's read from file.
      * @return array list of data, created using constructor with 1 parameter.
      */
 
-    public ArrayList<Data> createData (FileOpener fileOpener) throws FileNotFoundException {
-        Scanner scanner = fileOpener.readFile("branching\\src\\by.training\\resources\\fifthTask.txt");
+    public ArrayList<Data> createData () throws FileNotFoundException {
+        String source = "C:\\26_JavaST_2021\\Task02BranchingLoops\\branching\\src\\by.training\\resources\\fifthTask.txt";
+        Scanner scanner = new FileOpener().readFile(source);
         String [] separator;
         int objectCounter = 1;
         while (scanner.hasNextLine()) {

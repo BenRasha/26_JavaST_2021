@@ -12,13 +12,13 @@ public class FirstDataCreator {
 
     /**
      * Used to create and validate data for the first task.
-     * @param fileOpener Scanner object, which let's read from file.
      * @return array list of data created using constructor with 4 parameters.
      * @throws NumbersException custom exception with constructor that parses String message.
      */
 
-    public ArrayList<Data> createData (FileOpener fileOpener) throws NumbersException, FileNotFoundException {
-        Scanner scanner = fileOpener.readFile("C:\\26_JavaST_2021\\Task02BranchingLoops\\branching\\src\\by.training\\resources\\firstTask.txt");
+    public ArrayList<Data> createData () throws NumbersException, FileNotFoundException {
+        String source = "C:\\26_JavaST_2021\\Task02BranchingLoops\\branching\\src\\by.training\\resources\\firstTask.txt";
+        Scanner scanner = new FileOpener().readFile(source);
         String [] separator;
         int counter = 1;
         while (scanner.hasNextLine()) {

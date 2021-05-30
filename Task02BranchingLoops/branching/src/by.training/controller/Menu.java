@@ -26,11 +26,10 @@ public class Menu {
         while (true) {
             System.out.println(INFO);
             int actionSelector = scanner.nextInt();
-            FileOpener fileOpener = new FileOpener();
             switch (actionSelector) {
                 case 1:
                     FirstDataCreator firstDataCreator = new FirstDataCreator();
-                    ArrayList<Data> data = firstDataCreator.createData(fileOpener);
+                    ArrayList<Data> data = firstDataCreator.createData();
                     ModFinder modFinder = new ModFinder();
                     for (Data flag : data) {
                         menuLogger.info("With provided {} as x, answer of the equation: {}", flag.getX(), modFinder.modCounter(flag));
@@ -38,7 +37,7 @@ public class Menu {
                     break;
                 case 2:
                    SecondDataCreator secondDataCreator = new SecondDataCreator();
-                   ArrayList<Data> secondTask = secondDataCreator.createData(fileOpener);
+                   ArrayList<Data> secondTask = secondDataCreator.createData();
                     ArithmeticCompiler arithmeticCompiler = new ArithmeticCompiler();
                    for (Data flag : secondTask) {
                        menuLogger.info("We were given {} as an x and {} as y", flag.getX(), flag.getA());
@@ -48,16 +47,16 @@ public class Menu {
                    break;
                 case 3:
                     ThirdDataCreator thirdDataCreator = new ThirdDataCreator();
-                    ArrayList<Data> thirdTask = thirdDataCreator.createData(fileOpener);
+                    ArrayList<Data> thirdTask = thirdDataCreator.createData();
                     for (Data flag : thirdTask) {
                         menuLogger.info("Day: {}, Month: {}", flag.getX(), flag.getA());
                     }
                     break;
                 case 4:
                     FourthDataCreator fourthDataCreator = new FourthDataCreator();
-                    ArrayList<Data> fourthTask = fourthDataCreator.createData(fileOpener);
+                    ArrayList<Data> fourthTask = fourthDataCreator.createData();
                     FitChecker fitChecker = new FitChecker();
-                    int hole[] = fitChecker.createHole();
+                    int[] hole = fitChecker.createHole();
                     for (Data flag : fourthTask) {
                         if (fitChecker.checkWhetherBrickFits(flag, hole[0], hole[1])) {
                             menuLogger.info("x: {}, y: {}, z: {}: This brick fits in a hole",flag.getX(), flag.getA(), flag.getB());
@@ -68,7 +67,7 @@ public class Menu {
                     break;
                 case 5:
                     FifthDataCreator fifthDataCreator = new FifthDataCreator();
-                    ArrayList<Data> fifthTask = fifthDataCreator.createData(fileOpener);
+                    ArrayList<Data> fifthTask = fifthDataCreator.createData();
                     EquationCounter equationCounter = new EquationCounter();
                     for (Data flag : fifthTask) {
                         menuLogger.info("With {} provided as x, answer of the equation: {}", flag.getX(), equationCounter.countEquation(flag));
