@@ -39,6 +39,7 @@ public class Menu {
                     for (Data flag : firstTask) {
                         menuLogger.info("With lower border: {}, higher border: {} and step: {}", flag.getLowerBorder(), flag.getHigherBorder(), flag.getStep() + " .Output looks like this:");
                         menuLogger.info("{}", completer.functionCount(flag));
+                        completer.functionCount(flag).clear();
                     }
                     break;
                 case 2:
