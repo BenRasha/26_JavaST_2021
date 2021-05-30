@@ -1,0 +1,34 @@
+2021-05-30 20:39:11.145 [main] INFO  DataCreator - Object 1 has been successfully created
+2021-05-30 20:39:11.147 [main] INFO  DataCreator - Object 2 has been successfully created
+2021-05-30 20:39:11.147 [main] INFO  DataCreator - Object 3 has been successfully created
+2021-05-30 20:39:11.147 [main] INFO  Menu - With lower border: 0, higher border: 10 and step: 1 .Output looks like this:
+2021-05-30 20:39:11.147 [main] INFO  Menu - [0, -1, -2, 3, 4, 5, 6, 7, 8, 9]
+2021-05-30 20:39:11.147 [main] INFO  Menu - With lower border: 1, higher border: 9 and step: 2 .Output looks like this:
+2021-05-30 20:39:11.147 [main] INFO  Menu - [0, -1, -2, 3, 4, 5, 6, 7, 8, 9, -1, 3, 5, 7]
+2021-05-30 20:39:11.147 [main] INFO  Menu - With lower border: 4, higher border: 6 and step: 1 .Output looks like this:
+2021-05-30 20:39:11.147 [main] INFO  Menu - [0, -1, -2, 3, 4, 5, 6, 7, 8, 9, -1, 3, 5, 7, 4, 5]
+2021-05-30 20:39:25.620 [main] INFO  Menu - Answer: 2047
+2021-05-30 20:39:33.484 [main] INFO  DataCreator - Object 1 has been successfully created
+2021-05-30 20:39:33.484 [main] INFO  DataCreator - Object 2 has been successfully created
+2021-05-30 20:39:33.484 [main] INFO  DataCreator - Object 3 has been successfully created
+2021-05-30 20:39:33.484 [main] INFO  Menu - Argument: 0, Function: Infinity
+2021-05-30 20:39:33.484 [main] INFO  Menu - Argument: 1, Function: Infinity
+2021-05-30 20:39:33.484 [main] INFO  Menu - Argument: 2, Function: Infinity
+2021-05-30 20:39:33.484 [main] INFO  Menu - Argument: 3, Function: 0.7126526199642642
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 4, Function: 0.26369136828036654
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 5, Function: 0.16263047860276142
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 6, Function: -0.5973653034597487
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 7, Function: -0.12916425500089124
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 8, Function: 0.037021568951405126
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 9, Function: -6.809193308813655
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 1, Function: Infinity
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 3, Function: 0.7126526199642642
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 5, Function: 0.16263047860276142
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 7, Function: -0.12916425500089124
+2021-05-30 20:39:33.492 [main] INFO  Menu - Argument: 4, Function: 0.26369136828036654
+2021-05-30 20:39:33.494 [main] INFO  Menu - Argument: 5, Function: 0.16263047860276142
+2021-05-30 20:39:47.595 [main] INFO  Menu - Numbers inputted: [3, 5, 6, 1, 0]
+2021-05-30 20:39:47.595 [main] INFO  Menu - Numbers that were generated: [0, 6, 9, 10, 5]
+2021-05-30 20:39:47.595 [main] INFO  Menu - Numbers guessed: [5, 6, 0], numbers not guessed: [9, 10]
+2021-05-30 20:40:02.966 [main] INFO  Menu - Number we're searching for: 350
+2021-05-30 20:40:06.655 [main] INFO  Menu - User decided to quit
