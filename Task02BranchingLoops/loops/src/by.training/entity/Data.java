@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Data {
 
     private int lowerBorder;
@@ -32,5 +34,18 @@ public class Data {
 
     public void setStep(int step) {
         this.step = step;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Data data = (Data) o;
+        return lowerBorder == data.lowerBorder && higherBorder == data.higherBorder && step == data.step;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(lowerBorder, higherBorder, step);
     }
 }

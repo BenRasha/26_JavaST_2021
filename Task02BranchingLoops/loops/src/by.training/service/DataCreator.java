@@ -22,6 +22,10 @@ public class DataCreator {
         String []separator;
         while (scanner.hasNextLine()) {
             separator = scanner.nextLine().split(" ");
+            if (separator.length != 3) {
+                dataCreatorLogger.error(new IllegalArgumentException("Not enough elements"));
+                throw new IllegalArgumentException("Not enough elements");
+            }
             data.add(new Data(Integer.parseInt(separator[0]), Integer.parseInt(separator[1]), Integer.parseInt(separator[2])));
             dataCreatorLogger.info("Object {} has been successfully created", objectCounter);
             objectCounter++;
