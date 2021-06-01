@@ -9,9 +9,9 @@ public class PiCounterTest {
     public Object[][] createPositiveDataForElevation() {
         return new Object[][]{
                 {0, 1.0},
-                {1, 3.14},
-                {2, 9.8596},
-                {3, 30.9591}
+                {1, Math.PI},
+                {2, Math.pow(Math.PI,2)},
+                {3, Math.pow(Math.PI,3)}
         };
     }
 
