@@ -14,6 +14,11 @@ public class Rectangle {
         this.width = length/2;
     }
 
+    public Rectangle (double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
     public double getWidth() {
         return width;
     }

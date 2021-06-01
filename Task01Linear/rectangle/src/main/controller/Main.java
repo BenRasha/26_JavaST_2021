@@ -15,8 +15,9 @@ public class Main {
 
     public void go () {
         RectangleAreaCounter rectangleAreaCounter = new RectangleAreaCounter();
+        UserInput userInput = new UserInput();
         System.out.println("Input length of a rectangle:");
-        double length = rectangleAreaCounter.lengthInput();
+        double length = userInput.lengthInput();
         mainLogger.info("The user has inputted: {} as the length of a rectangle.", length);
         mainLogger.info("Area of rectangle: {}", rectangleAreaCounter.areaCounter(length));
     }
