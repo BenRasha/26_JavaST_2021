@@ -15,5 +15,8 @@
         <Logger name="Main" level="info" additivity="true">
             <AppenderRef ref="circleFile"/>
         </Logger>
+        <Logger name="UserInput" level="error" additivity="true">
+            <AppenderRef ref="circleFile"/>
+        </Logger>
     </Loggers>
 </Configuration>

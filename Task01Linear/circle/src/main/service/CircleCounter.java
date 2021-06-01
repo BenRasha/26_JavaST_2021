@@ -1,22 +1,4 @@
-import java.util.Scanner;
-
 public class CircleCounter {
-
-    /**
-     * Method input() is used to get the input from the user.
-     * @return double value of the user input.
-     */
-
-    public double input () {
-        Scanner scanner = new Scanner(System.in);
-        double a = 0.0;
-        try {
-            a = scanner.nextDouble();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return a;
-    }
 
     /**
      * Creates the circle object and counts the circle area: S = pi * (R^2 - r^2).
