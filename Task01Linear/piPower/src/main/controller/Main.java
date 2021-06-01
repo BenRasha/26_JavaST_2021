@@ -15,7 +15,7 @@ public class Main {
 
     public void go() {
         for (int i = 0; i < 5; i++) {
-            mainLogger.info("PI elevated in {} is equal to: {}", i, Runner.piElevator(i));
+            mainLogger.info("PI elevated in {} is equal to: {}", i, PiCounter.piElevator(i));
         }
     }
 

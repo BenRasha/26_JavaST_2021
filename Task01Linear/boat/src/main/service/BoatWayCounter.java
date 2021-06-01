@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Runner {
+public class BoatWayCounter {
 
     /**
      * Is used to get the input from the user.

@@ -14,11 +14,11 @@ public class Main {
      */
 
     public void go () {
-        Runner runner = new Runner();
+        RectangleAreaCounter rectangleAreaCounter = new RectangleAreaCounter();
         System.out.println("Input length of a rectangle:");
-        double length = runner.lengthInput();
+        double length = rectangleAreaCounter.lengthInput();
         mainLogger.info("The user has inputted: {} as the length of a rectangle.", length);
-        mainLogger.info("Area of rectangle: {}", runner.areaCounter(length));
+        mainLogger.info("Area of rectangle: {}", rectangleAreaCounter.areaCounter(length));
     }
 
     public static void main (String[] args) {

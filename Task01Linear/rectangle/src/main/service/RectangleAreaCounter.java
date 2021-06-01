@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Runner {
+public class RectangleAreaCounter {
 
     /**
      * Is used to get the user input for the length value.

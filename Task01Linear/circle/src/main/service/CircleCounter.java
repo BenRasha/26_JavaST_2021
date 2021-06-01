@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Runner {
+public class CircleCounter {
 
     /**
      * Method input() is used to get the input from the user.

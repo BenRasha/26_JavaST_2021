@@ -15,20 +15,20 @@ public class Main {
      */
 
     public void go () {
-        Runner runner = new Runner();
+        BoatWayCounter boatWayCounter = new BoatWayCounter();
         System.out.print("Input speed of the boat: ");
-        int boatSpeed = runner.input();
+        int boatSpeed = boatWayCounter.input();
         mainLogger.info("The user has entered {}km/h as the speed of the boat", boatSpeed);
         System.out.print("Input speed of the flow of the river: ");
-        int rvrSpd = runner.input();
+        int rvrSpd = boatWayCounter.input();
         mainLogger.info("The user has entered {}km/h as the speed of the river flow", rvrSpd);
         System.out.print("Input time of the boat in a lake: ");
-        int lkTime = runner.input();
+        int lkTime = boatWayCounter.input();
         mainLogger.info("The user has entered {}h as the time of the boat in a lake", lkTime);
         System.out.print("Input time, which took boat to travel against the flow: ");
-        int agnstFlwTm = runner.input();
+        int agnstFlwTm = boatWayCounter.input();
         mainLogger.info("The user has entered {}h as the time, which boat travelled against the river flow", agnstFlwTm);
-        mainLogger.info("The whole way of the boat: {}", runner.wayCounter(boatSpeed,rvrSpd,lkTime,agnstFlwTm));
+        mainLogger.info("The whole way of the boat: {}", boatWayCounter.wayCounter(boatSpeed,rvrSpd,lkTime,agnstFlwTm));
     }
 
     public static void main (String []args) {

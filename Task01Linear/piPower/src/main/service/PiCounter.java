@@ -1,4 +1,4 @@
-public class Runner {
+public class PiCounter {
 
     private static final double PI = 3.14;
 
