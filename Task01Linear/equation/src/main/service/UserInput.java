@@ -9,7 +9,7 @@ public class UserInput {
 
     /**
      * Is used to get the user input for the length value.
-     * @return double value of users input.
+     * @return int value of users input.
      */
 
     public int lengthInput () {
