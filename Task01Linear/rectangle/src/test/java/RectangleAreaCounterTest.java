@@ -3,9 +3,9 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class RunnerTest {
+public class RectangleAreaCounterTest {
 
-    private Runner runner = new Runner();
+    private RectangleAreaCounter rectangleAreaCounter = new RectangleAreaCounter();
 
     @DataProvider(name = "positiveDataForArea")
     public Object[][] createPositiveDataForArea() {
@@ -28,7 +28,7 @@ public class RunnerTest {
     @Test(description = "Positive scenario for area",dataProvider = "positiveDataForArea")
     public void areaTest (double a, double c) {
         double expected = c;
-        double actual = runner.areaCounter(a);
+        double actual = rectangleAreaCounter.areaCounter(a);
         assertEquals(actual, expected);
     }
 }

@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class RunnerTest {
+public class PiCounterTest {
 
     @DataProvider(name = "positiveDataForElevation")
     public Object[][] createPositiveDataForElevation() {
@@ -25,7 +25,7 @@ public class RunnerTest {
     @Test(description = "Positive scenario for PI elevation",dataProvider = "positiveDataForElevation")
     public void areaTest (int a, double c) {
         double expected = c;
-        double actual = Runner.piElevator(a);
+        double actual = PiCounter.piElevator(a);
         assertEquals(actual, expected,0.0001);
     }
 }

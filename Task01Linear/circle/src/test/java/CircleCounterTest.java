@@ -1,13 +1,11 @@
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-
 import static org.testng.Assert.assertEquals;
 
-public class RunnerTest {
+public class CircleCounterTest {
 
-    private Runner runner = new Runner();
+    private CircleCounter circleCounter = new CircleCounter();
 
     @DataProvider(name = "input_a_b")
     public Object[][] createCorrectData() {
@@ -28,7 +26,7 @@ public class RunnerTest {
 
     @Test(description = "Positive scenario for area",dataProvider = "input_a_b")
     public void testArea (double []ab, double c) {
-        double actual = runner.areaCounter(ab[0], ab[1]);
+        double actual = circleCounter.areaCounter(ab[0], ab[1]);
         double expected = c;
         assertEquals(actual,expected,0.0001);
     }
