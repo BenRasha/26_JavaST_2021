@@ -15,5 +15,8 @@
         <Logger name="Main" level="info" additivity="true">
             <AppenderRef ref="equationFile"/>
         </Logger>
+        <Logger name="UserInput" level="error" additivity="true">
+            <AppenderRef ref="equationFile"/>
+        </Logger>
     </Loggers>
 </Configuration>
