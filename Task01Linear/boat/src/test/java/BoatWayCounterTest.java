@@ -10,10 +10,10 @@ public class BoatWayCounterTest {
     @DataProvider(name = "input_a_b_c_d")
     public Object[][] createPositiveDataForWay() {
         return new Object[][]{
-                {4, 2, 1, 3, 10},
-                {0, 0, 1, 1, 0},
-                {1, 1, 1, 1, 1},
-                {2, 1, 5, 1, 11},
+                {new int[]{4, 2, 1, 3}, 10},
+                {new int[]{0, 0, 1, 1}, 0},
+                {new int[]{1, 1, 1, 1}, 1},
+                {new int[]{2, 1, 5, 1}, 11},
         };
     }
 
@@ -25,9 +25,9 @@ public class BoatWayCounterTest {
     }
 
     @Test(description = "Positive scenario for area",dataProvider = "input_a_b_c_d")
-    public void areaTest (int a, int b, int c, int d, int e) {
-        double expected = e;
-        double actual = boatWayCounter.wayCounter(a,b,c,d);
+    public void areaTest (int[] a, int c) {
+        int expected = c;
+        int actual = boatWayCounter.wayCounter(a);
         assertEquals(actual, expected);
     }
 }
