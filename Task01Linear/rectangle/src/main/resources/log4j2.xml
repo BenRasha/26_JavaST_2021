@@ -15,5 +15,8 @@
         <Logger name="Main" level="info" additivity="true">
             <AppenderRef ref="rectangleFile"/>
         </Logger>
+        <Logger name="UserInput" level="error" additivity="true">
+            <AppenderRef ref="rectangleFile"/>
+        </Logger>
     </Loggers>
 </Configuration>
