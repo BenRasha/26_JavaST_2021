@@ -27,9 +27,9 @@ public class RunnerTest {
     }
 
     @Test(description = "Positive scenario for area",dataProvider = "input_a_b")
-    public void testArea (double []ab, int c) {
+    public void testArea (double []ab, double c) {
         double actual = runner.areaCounter(ab[0], ab[1]);
         double expected = c;
-        assertEquals(actual,expected);
+        assertEquals(actual,expected,0.0001);
     }
 }
