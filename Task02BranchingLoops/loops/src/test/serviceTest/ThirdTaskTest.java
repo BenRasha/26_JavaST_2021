@@ -22,9 +22,9 @@ public class ThirdTaskTest {
 
     @Test(description = "Positive scenario for function count", dataProvider = "PositiveDataForThirdTask")
     public void testCount(int a, double c) {
-        List<Double> actualList = thirdTask.count(a);
-        Double expectedList = c;
-        assertEquals(actualList.toString(), expectedList.toString());
+        double actual = thirdTask.count(a);
+        double expected = c;
+        assertEquals(actual, expected);
     }
 
 }

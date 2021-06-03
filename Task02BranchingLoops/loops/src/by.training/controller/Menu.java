@@ -51,7 +51,7 @@ public class Menu {
                     ThirdTask thrdTask = new ThirdTask();
                     for (Data flag : thirdTask) {
                         for (int i = flag.getLowerBorder(); i < flag.getHigherBorder(); i += flag.getStep()) {
-                            menuLogger.info("Argument: {}, Function: {}", i, thrdTask.count(i).get(i));
+                            menuLogger.info("Argument: {}, Function: {}", i, thrdTask.count(i));
                         }
                     }
                     break;

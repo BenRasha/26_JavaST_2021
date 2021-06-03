@@ -21,7 +21,6 @@ public class FileOpener {
             fileReader = new FileReader(file);
         } catch (FileNotFoundException e) {
             fileOpenerLogger.error("File was not found");
-            e.printStackTrace();
         }
         return fileReader;
     }
