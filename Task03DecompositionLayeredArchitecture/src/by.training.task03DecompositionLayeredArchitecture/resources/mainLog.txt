@@ -1,0 +1,8 @@
+2021-06-13 16:30:42.296 [main] INFO  BubbleSort - Method fillArrayFromFile(Array array, File file) has been invoked
+2021-06-13 16:30:42.301 [main] INFO  BubbleCommandImpl - Method sort(Array array, boolean isIncreasing has been invoked
+2021-06-13 16:31:02.929 [main] INFO  MatrixSummator - Method createFromFile(Matrix matrix,File file) has been invoked
+2021-06-13 16:31:02.929 [main] INFO  MatrixSummator - Method createFromFile(Matrix matrix,File file) has been invoked
+2021-06-13 16:31:02.929 [main] INFO  SummatorCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-13 16:31:14.916 [main] INFO  MatrixSubdivider - Method createFromFile(Matrix matrix,File file) has been invoked
+2021-06-13 16:31:14.918 [main] INFO  MatrixSubdivider - Method createFromFile(Matrix matrix,File file) has been invoked
+2021-06-13 16:31:14.921 [main] INFO  SubdividerCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked

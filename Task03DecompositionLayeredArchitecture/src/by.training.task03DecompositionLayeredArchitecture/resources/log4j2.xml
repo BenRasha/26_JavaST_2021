@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="patternfull">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{5} - %msg%n
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${patternfull}"/>
+        </Console>
+        <File name="mainFile" bufferedIO="true" fileName="src/by.training.task03DecompositionLayeredArchitecture/resources/mainLog.txt">
+            <PatternLayout pattern="${patternfull}"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="ArrayDAOImpl" level="error" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MatrixDAOImpl" level="error" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="BubbleSort" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="InsertionSort" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MergeSort" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="SelectionSort" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="ShakerSort" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="ShellSort" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MatrixMultiplicator" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MatrixSubdivider" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MatrixSummator" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="BubbleCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="InsertionCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MergeCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="SelectionCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="ShakerCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="ShellCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="MultiplyCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="SubdividerCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="SummatorCommandImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="CommandProvider" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+    </Loggers>
+</Configuration>
