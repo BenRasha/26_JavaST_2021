@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -20,43 +18,37 @@ public class FileOpenerTest {
 
     @DataProvider(name = "positiveDataForFileOpening")
     public Object[][] createDataForFileOpening() {
-        return new Object[][] {
-                {"src/test/resources/firstSource.txt","src/test/resources/firstSource.txt"},
-                {"src/test/resources/secondSource.txt", "src/test/resources/secondSource.txt"},
+        return new Object[][]{
+                {"src/test/resources/firstSource.txt", "This is a resource file for tests"},
+                {"src/test/resources/secondSource.txt", "This a resource file for testing"},
         };
     }
 
     @DataProvider(name = "negativeDataForFileOpening")
     public Object[][] createNegativeDataForFileOpening() {
-        return new Object[][] {
+        return new Object[][]{
                 {"notExistingPath"}
         };
     }
 
 
     @Test(description = "Positive scenario for file reading", dataProvider = "positiveDataForFileOpening")
-    public void testReadFile (String source, String c) throws FileNotFoundException {
-        Scanner actual = fileOpener.readFile(source);
-        FileReader fileReader = null;
-        try {
-            File file = new File(c);
-            fileReader = new FileReader(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        Scanner expected = new Scanner(fileReader);
-        assertEquals(actual,expected);
+    public void testReadFile(String source, String c) throws FileNotFoundException {
+        List<String> actual = fileOpener.readFile(source);
+        List<String> expected = new ArrayList<String>(Collections.singleton(c));
+        assertEquals(actual, expected);
+
     }
 
     @Test(description = "Negative scenario for file opening", dataProvider = "negativeDataForFileOpening")
-    public void testNegativeReadFile (String source) {
+    public void testFillFromFile(String source) {
         boolean caught = false;
         try {
-            Scanner actual = fileOpener.readFile(source);
-        } catch (FileNotFoundException | NullPointerException e) {
+            List<String> actual = fileOpener.readFile(source);
+        } catch (FileNotFoundException e) {
             caught = true;
         }
         assertTrue(caught);
     }
-
 }
+

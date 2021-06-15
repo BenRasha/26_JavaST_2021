@@ -3,6 +3,8 @@ import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 
@@ -19,11 +21,8 @@ public class ThirdDataCreatorTest {
 
     @Test(description = "Positive scenario for data creation for third task", dataProvider = "PositiveDataForDataCreationForThirdTask")
     public void testCreateData(Data[] data) throws FileNotFoundException, NumbersException {
-        ArrayList<Data> actual = thirdDataCreator.createData();
-        ArrayList<Data> expected = new ArrayList<>();
-        for (Data flag: data) {
-            expected.add(flag);
-        }
+        List<Data> actual = thirdDataCreator.createData();
+        List<Data> expected = new ArrayList<Data>(Arrays.asList(data));
         assertEquals(actual,expected);
     }
 
