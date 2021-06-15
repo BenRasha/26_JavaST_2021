@@ -11,6 +11,7 @@ public class Data {
     private int a;
     private int b;
     private int c;
+    private int d;
 
     public Data (int x, int a, int b, int c) {
         this.x = x;
@@ -28,6 +29,14 @@ public class Data {
         this.x = x;
         this.a = a;
         this.b = b;
+    }
+
+    public Data (int xOfHole, int yOfHole, int xOfBrick, int yOfBrick, int zOfBrick) {
+        this.x = xOfHole;
+        this.a = yOfHole;
+        this.b = xOfBrick;
+        this.c = yOfBrick;
+        this.d = zOfBrick;
     }
 
     public Data (int x) {
@@ -64,6 +73,14 @@ public class Data {
 
     public void setC(int c) {
         this.c = c;
+    }
+
+    public int getD() {
+        return d;
+    }
+
+    public void setD(int d) {
+        this.d = d;
     }
 
     @Override

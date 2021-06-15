@@ -27,9 +27,8 @@ public class ArithmeticCompiler {
      */
 
     public Data numberReplacer (Data data) {
-        ArithmeticCompiler arithmeticCompiler = new ArithmeticCompiler();
-        int halfSum = arithmeticCompiler.halfSumFinder(data);
-        int dualMul = arithmeticCompiler.dualMultiFinder(data);
+        int halfSum = halfSumFinder(data);
+        int dualMul = dualMultiFinder(data);
         if (data.getX() < data.getA()) {
             data.setX(halfSum);
             data.setA(dualMul);

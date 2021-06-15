@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class FileOpener {
@@ -11,14 +13,20 @@ public class FileOpener {
      * @return Scanner object which after can be used to read information
      */
 
-    public Scanner readFile (String source) throws FileNotFoundException{
+    public List<String> readFile (String source) throws FileNotFoundException{
         FileReader fileReader = null;
         try {
             File file = new File(source);
             fileReader = new FileReader(file);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            throw new FileNotFoundException();
         }
-        return new Scanner(fileReader);
+        List<String> result = new ArrayList<>();
+        try (Scanner scanner = new Scanner(fileReader)) {
+            while (scanner.hasNextLine()) {
+                result.add(scanner.nextLine());
+            }
+        }
+        return result;
     }
 }

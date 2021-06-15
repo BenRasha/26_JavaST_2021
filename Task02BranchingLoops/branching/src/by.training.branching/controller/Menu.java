@@ -1,8 +1,9 @@
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -22,23 +23,33 @@ public class Menu {
      * @throws NumbersException custom exception with constructor that's parsing String message.
      */
 
-    public void go () throws NumbersException, FileNotFoundException {
+    public void go () {
         while (true) {
             System.out.println(INFO);
             int actionSelector = scanner.nextInt();
             switch (actionSelector) {
                 case 1:
                     FirstDataCreator firstDataCreator = new FirstDataCreator();
-                    ArrayList<Data> data = firstDataCreator.createData();
+                    List<Data> fstTask = new ArrayList<>();
+                    try {
+                        fstTask = firstDataCreator.createData();
+                    } catch (FileNotFoundException | NumbersException exception) {
+                        menuLogger.info("Error during creating data for first task from file");
+                    }
                     ModFinder modFinder = new ModFinder();
-                    for (Data flag : data) {
+                    for (Data flag : fstTask) {
                         menuLogger.info("With provided {} as x, answer of the equation: {}", flag.getX(), modFinder.modCounter(flag));
                     }
                     break;
                 case 2:
                    SecondDataCreator secondDataCreator = new SecondDataCreator();
-                   ArrayList<Data> secondTask = secondDataCreator.createData();
-                    ArithmeticCompiler arithmeticCompiler = new ArithmeticCompiler();
+                   List<Data> secondTask = new ArrayList<>();
+                   try {
+                       secondTask = secondDataCreator.createData();
+                   } catch (FileNotFoundException | NumbersException e) {
+                       menuLogger.info("Error during creating data for second task from file");
+                   }
+                   ArithmeticCompiler arithmeticCompiler = new ArithmeticCompiler();
                    for (Data flag : secondTask) {
                        menuLogger.info("We were given {} as an x and {} as y", flag.getX(), flag.getA());
                        arithmeticCompiler.numberReplacer(flag);
@@ -47,27 +58,43 @@ public class Menu {
                    break;
                 case 3:
                     ThirdDataCreator thirdDataCreator = new ThirdDataCreator();
-                    ArrayList<Data> thirdTask = thirdDataCreator.createData();
+                    List<Data> thirdTask = null;
+                    try {
+                        thirdTask = thirdDataCreator.createData();
+                    } catch (NumbersException | FileNotFoundException e) {
+                        menuLogger.info("Error during creating data for the third task");
+                    }
+                    assert thirdTask != null;
                     for (Data flag : thirdTask) {
                         menuLogger.info("Day: {}, Month: {}", flag.getX(), flag.getA());
                     }
                     break;
                 case 4:
                     FourthDataCreator fourthDataCreator = new FourthDataCreator();
-                    ArrayList<Data> fourthTask = fourthDataCreator.createData();
+                    List<Data> fourthTask = null;
+                    try {
+                        fourthTask = fourthDataCreator.createData();
+                    } catch (FileNotFoundException | NumbersException e) {
+                        menuLogger.info("Error during creating data for the fourth task");
+                    }
                     FitChecker fitChecker = new FitChecker();
-                    int[] hole = fitChecker.createHole();
+                    assert fourthTask != null;
                     for (Data flag : fourthTask) {
-                        if (fitChecker.checkWhetherBrickFits(flag, hole[0], hole[1])) {
-                            menuLogger.info("x: {}, y: {}, z: {}: This brick fits in a hole",flag.getX(), flag.getA(), flag.getB());
+                        if (fitChecker.checkWhetherBrickFits(flag)) {
+                            menuLogger.info("The brick {} {} {} fits into hole {} {}", flag.getB(), flag.getC(), flag.getD(), flag.getX(), flag.getA());
                         } else {
-                            menuLogger.info("x: {}, y: {}, z: {}: This brick doesn't fit in a hole",flag.getX(), flag.getA(), flag.getB());
+                            menuLogger.info("The brick {} {} {} doesn't fit into hole {} {}", flag.getB(), flag.getC(), flag.getD(), flag.getX(), flag.getA());
                         }
                     }
                     break;
                 case 5:
                     FifthDataCreator fifthDataCreator = new FifthDataCreator();
-                    ArrayList<Data> fifthTask = fifthDataCreator.createData();
+                    List<Data> fifthTask = null;
+                    try {
+                        fifthTask = fifthDataCreator.createData();
+                    } catch (FileNotFoundException e) {
+                        menuLogger.info("Error during creating data for the fifth task");
+                    }
                     EquationCounter equationCounter = new EquationCounter();
                     for (Data flag : fifthTask) {
                         menuLogger.info("With {} provided as x, answer of the equation: {}", flag.getX(), equationCounter.countEquation(flag));

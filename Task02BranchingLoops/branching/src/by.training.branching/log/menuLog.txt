@@ -1,0 +1,30 @@
+2021-06-15 17:22:16.530 [main] INFO  Menu - With provided -1 as x, answer of the equation: 5
+2021-06-15 17:22:16.530 [main] INFO  Menu - With provided 4 as x, answer of the equation: 70
+2021-06-15 17:22:17.746 [main] INFO  Menu - We were given 5 as an x and 3 as y
+2021-06-15 17:22:17.746 [main] INFO  Menu - After method numberReplacer(Data data) has been invoked numbers look this: 30  4
+2021-06-15 17:22:17.746 [main] INFO  Menu - We were given 7 as an x and 8 as y
+2021-06-15 17:22:17.746 [main] INFO  Menu - After method numberReplacer(Data data) has been invoked numbers look this: 7  112
+2021-06-15 17:22:18.843 [main] INFO  Menu - Day: 12, Month: 5
+2021-06-15 17:22:18.845 [main] INFO  Menu - Day: 1, Month: 1
+2021-06-15 17:30:18.729 [main] INFO  Menu - The brick 5 6 7 doesn't fit into hole 3 4
+2021-06-15 17:30:18.729 [main] INFO  Menu - The brick 3 6 7 doesn't fit into hole 5 4
+2021-06-15 17:30:18.729 [main] INFO  Menu - The brick 2 6 7 fits into hole 7 8
+2021-06-15 17:30:27.220 [main] INFO  Menu - With 14 provided as x, answer of the equation: -191
+2021-06-15 17:30:27.220 [main] INFO  Menu - With 5 provided as x, answer of the equation: 0
+2021-06-15 17:30:27.220 [main] INFO  Menu - With 8 provided as x, answer of the equation: -65
+2021-06-15 17:30:32.231 [main] INFO  Menu - User pressed 6 to quit
+2021-06-15 18:06:47.480 [main] INFO  Menu - With provided -1 as x, answer of the equation: 5
+2021-06-15 18:06:47.480 [main] INFO  Menu - With provided 4 as x, answer of the equation: 70
+2021-06-15 18:06:48.611 [main] INFO  Menu - We were given 5 as an x and 3 as y
+2021-06-15 18:06:48.611 [main] INFO  Menu - After method numberReplacer(Data data) has been invoked numbers look this: 30  4
+2021-06-15 18:06:48.611 [main] INFO  Menu - We were given 7 as an x and 8 as y
+2021-06-15 18:06:48.611 [main] INFO  Menu - After method numberReplacer(Data data) has been invoked numbers look this: 7  112
+2021-06-15 18:06:50.328 [main] INFO  Menu - Day: 12, Month: 5
+2021-06-15 18:06:50.328 [main] INFO  Menu - Day: 1, Month: 1
+2021-06-15 18:06:51.395 [main] INFO  Menu - The brick 5 6 7 doesn't fit into hole 3 4
+2021-06-15 18:06:51.395 [main] INFO  Menu - The brick 3 6 7 doesn't fit into hole 5 4
+2021-06-15 18:06:51.395 [main] INFO  Menu - The brick 2 6 7 fits into hole 7 8
+2021-06-15 18:06:52.504 [main] INFO  Menu - With 14 provided as x, answer of the equation: -191
+2021-06-15 18:06:52.504 [main] INFO  Menu - With 5 provided as x, answer of the equation: 0
+2021-06-15 18:06:52.504 [main] INFO  Menu - With 8 provided as x, answer of the equation: -65
+2021-06-15 18:06:53.846 [main] INFO  Menu - User pressed 6 to quit
