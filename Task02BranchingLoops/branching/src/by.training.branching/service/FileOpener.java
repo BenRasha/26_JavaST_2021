@@ -14,13 +14,8 @@ public class FileOpener {
      */
 
     public List<String> readFile (String source) throws FileNotFoundException{
-        FileReader fileReader = null;
-        try {
-            File file = new File(source);
-            fileReader = new FileReader(file);
-        } catch (FileNotFoundException e) {
-            throw new FileNotFoundException();
-        }
+        File file = new File(source);
+        FileReader fileReader = new FileReader(file);
         List<String> result = new ArrayList<>();
         try (Scanner scanner = new Scanner(fileReader)) {
             while (scanner.hasNextLine()) {
