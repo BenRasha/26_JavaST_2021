@@ -1,11 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 public class MatrixSubdivider implements MatrixOperator{
-
-    static final Logger matrixSubdividerLogger = LogManager.getLogger(MatrixSubdivider.class.getName());
 
     /**
      * Subdivides elements of two matrices
@@ -23,11 +18,8 @@ public class MatrixSubdivider implements MatrixOperator{
             MatrixDAO matrixDAO = daoFactory.getMatrixDAOImpl();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/matrix.txt";
             matrixDAO.createFromFile(p, new File(source));
-            matrixSubdividerLogger.info("Method createFromFile(Matrix matrix,File file) has been invoked");
             matrixDAO.createFromFile(q, new File(source));
-            matrixSubdividerLogger.info("Method createFromFile(Matrix matrix,File file) has been invoked");
         } catch (DAOException | MatrixException e) {
-            matrixSubdividerLogger.error(new ServiceException("Error during creating and filling matrices"));
             throw new ServiceException(e);
         }
         int pVertical = p.getVerticalSize();
@@ -35,7 +27,6 @@ public class MatrixSubdivider implements MatrixOperator{
         int qVertical = q.getVerticalSize();
         int qHorizontal = q.getHorizontalSize();
         if (pVertical != qVertical || pHorizontal != qHorizontal) {
-            matrixSubdividerLogger.error("Not the same matrices");
             throw new ServiceException("Not same matrix");
         }
         Matrix result = null;
@@ -48,7 +39,6 @@ public class MatrixSubdivider implements MatrixOperator{
                 }
             }
         } catch (MatrixException e) {
-            matrixSubdividerLogger.error(new ServiceException("Error during result matrix creating"));
             throw new ServiceException(e);
         }
         return result;

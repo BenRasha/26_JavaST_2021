@@ -1,11 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 public class BubbleSort implements Sorting{
-
-    static final Logger bubbleSortLogger = LogManager.getLogger(BubbleSort.class.getName());
 
     /**
      * Iterates through array and compares each element, and swaps them if condition suits
@@ -21,9 +16,7 @@ public class BubbleSort implements Sorting{
             ArrayDAO arrayDAO = daoFactory.getArrayDAO();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/array.txt";
             arrayDAO.fillArrayFromFile(array, new File(source));
-            bubbleSortLogger.info("Method fillArrayFromFile(Array array, File file) has been invoked");
         } catch (DAOException e) {
-            bubbleSortLogger.error(new ServiceException("Error during filling array from file"));
             throw new ServiceException(e);
         }
         int length = array.getLength();

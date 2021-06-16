@@ -21,8 +21,7 @@ public class ArrayDAOImplTest {
     public void testFillArrayFromFile(String source, Integer[] c) throws DAOException {
         Array actual = new Array();
         arrayDAO.fillArrayFromFile(actual, new File(source));
-        Array expected = new Array();
-        expected.getValues().addAll(Arrays.asList(c));
+        Array expected = new Array(Arrays.asList(c));
         assertEquals(expected, actual);
     }
 

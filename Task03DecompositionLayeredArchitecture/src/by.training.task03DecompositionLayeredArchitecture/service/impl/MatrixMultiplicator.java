@@ -1,11 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 public class MatrixMultiplicator implements MatrixOperator{
-
-    static final Logger matrixMultiplicator = LogManager.getLogger(MatrixMultiplicator.class.getName());
 
     /**
      * Multiplies two matrices
@@ -23,11 +18,8 @@ public class MatrixMultiplicator implements MatrixOperator{
             MatrixDAO matrixDAO = daoFactory.getMatrixDAOImpl();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/matrix.txt";
             matrixDAO.createFromFile(p, new File(source));
-            matrixMultiplicator.info("Method createFromFile(Matrix matrix,File file) has been invoked");
             matrixDAO.createFromFile(q, new File(source));
-            matrixMultiplicator.info("Method createFromFile(Matrix matrix,File file) has been invoked");
         } catch (DAOException | MatrixException e) {
-            matrixMultiplicator.error(new ServiceException("Error during creating matrices and filling them"));
             throw new ServiceException(e);
         }
         int vertical = p.getVerticalSize();
@@ -49,7 +41,6 @@ public class MatrixMultiplicator implements MatrixOperator{
                 }
             }
         } catch (MatrixException e) {
-            matrixMultiplicator.error(new ServiceException("Error creating result matrix"));
             throw new ServiceException(e);
         }
         return result;

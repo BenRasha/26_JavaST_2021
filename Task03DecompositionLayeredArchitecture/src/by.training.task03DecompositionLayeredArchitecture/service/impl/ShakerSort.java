@@ -1,11 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 public class ShakerSort implements Sorting{
-
-    static final Logger shakerSortLogger = LogManager.getLogger(ShakerSort.class.getName());
 
     /**
      * Each iteration of the algorithm is broken up into 2 stages:
@@ -27,9 +22,7 @@ public class ShakerSort implements Sorting{
             ArrayDAO arrayDAO = daoFactory.getArrayDAO();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/array.txt";
             arrayDAO.fillArrayFromFile(array, new File(source));
-            shakerSortLogger.info("Method fillArrayFromFile(Array array, File file) has been invoked");
         } catch (DAOException e) {
-            shakerSortLogger.error(new ServiceException("Error during filling array from file"));
             throw new ServiceException(e);
         }
         int length = array.getLength();

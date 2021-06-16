@@ -1,11 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 public class MergeSort implements Sorting {
-
-    static final Logger mergeSortLogger = LogManager.getLogger(MergeSort.class.getName());
 
     /**
      * Calculates the delimiter - the position of the divisor. If the divisor can be divided into 2 parts,
@@ -28,9 +23,7 @@ public class MergeSort implements Sorting {
             ArrayDAO arrayDAO = daoFactory.getArrayDAO();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/array.txt";
             arrayDAO.fillArrayFromFile(array,new File(source));
-            mergeSortLogger.info("Method fillArrayFromFile(Array array, File file) has been invoked");
         } catch (DAOException e) {
-            mergeSortLogger.error(new ServiceException("Error during array filling from file"));
             throw new ServiceException(e);
         }
         int length = array.getLength();

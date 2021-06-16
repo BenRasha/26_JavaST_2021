@@ -6,3 +6,15 @@
 2021-06-13 16:31:14.916 [main] INFO  MatrixSubdivider - Method createFromFile(Matrix matrix,File file) has been invoked
 2021-06-13 16:31:14.918 [main] INFO  MatrixSubdivider - Method createFromFile(Matrix matrix,File file) has been invoked
 2021-06-13 16:31:14.921 [main] INFO  SubdividerCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-16 15:08:03.220 [main] INFO  SelectionCommandImpl - Method sort(Array array, boolean isIncreasing has been invoked
+2021-06-16 15:08:14.640 [main] INFO  BubbleCommandImpl - Method sort(Array array, boolean isIncreasing has been invoked
+2021-06-16 15:08:30.335 [main] INFO  MultiplyCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-16 15:10:01.044 [main] INFO  BubbleCommandImpl - No such type of sort
+2021-06-16 15:10:14.292 [main] INFO  CommandProvider - Wrong request
+java.lang.IllegalArgumentException: No enum constant CommandName.SF
+	at java.lang.Enum.valueOf(Enum.java:238) ~[?:1.8.0_261]
+	at CommandName.valueOf(CommandName.java:1) ~[classes/:?]
+	at CommandProvider.getCommand(CommandProvider.java:36) [classes/:?]
+	at Controller.executeTask(Controller.java:17) [classes/:?]
+	at Runner.go(Runner.java:30) [classes/:?]
+	at Runner.main(Runner.java:57) [classes/:?]

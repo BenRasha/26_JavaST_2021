@@ -8,7 +8,7 @@ public class Runner {
             "arrays -  Arrays and sorting.\n" +
             "matrix -  Matrices and operations with them (multiplying, subdividing, sum).\n" +
             "exit -  EXIT.\n";
-    private static final String Matrix_INFO = "Input multiply/sum/subdivide matrix or exit to return to start menu\n";
+    private static final String MATRIX_INFO = "Input multiply/sum/subdivide matrix or exit to return to start menu\n";
 
     private void go() {
         Scanner scanner = new Scanner(System.in);
@@ -34,7 +34,7 @@ public class Runner {
                 case "matrix":
                     boolean matrixFlag = true;
                     while (matrixFlag) {
-                        System.out.print(Matrix_INFO);
+                        System.out.print(MATRIX_INFO);
                         request = scanner.nextLine().toLowerCase().trim();
                         if (request.equals("exit")) {
                             matrixFlag = false;

@@ -1,11 +1,6 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 
 public class SelectionSort implements Sorting{
-
-    static final Logger selectionSortLogger = LogManager.getLogger(SelectionSort.class.getName());
 
     /**
      * Each pass selects the smallest element and moves it to the beginning. In this case, starts each new pass by moving
@@ -22,9 +17,7 @@ public class SelectionSort implements Sorting{
             ArrayDAO arrayDAO = daoFactory.getArrayDAO();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/array.txt";
             arrayDAO.fillArrayFromFile(array, new File(source));
-            selectionSortLogger.info("Method fillArrayFromFile(Array array, File file) has been invoked");
         } catch (DAOException e) {
-            selectionSortLogger.error(new ServiceException("Error during array filling from file"));
             throw new ServiceException(e);
         }
         int length = array.getLength();
