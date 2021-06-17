@@ -12,9 +12,15 @@ public class SummatorCommandImpl implements Command{
      */
     @Override
     public String execute(String request) {
-        Matrix firstM = new Matrix();
-        Matrix secondM = new Matrix();
-        String response = null;
+        Matrix firstM = null;
+        Matrix secondM = null;
+        try {
+            firstM = new Matrix(3,3);
+            secondM = new Matrix(3,3);
+        } catch (MatrixException e) {
+            summatorCommandImplLogger.info("Error during creating matrices");
+        }
+        String response;
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         MatrixOperator matrixSum = serviceFactory.getMatrixSummator();
         try {

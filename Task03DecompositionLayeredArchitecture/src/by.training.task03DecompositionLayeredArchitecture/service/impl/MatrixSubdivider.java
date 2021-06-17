@@ -12,14 +12,12 @@ public class MatrixSubdivider implements MatrixOperator{
     @Override
     public Matrix completeOperation(Matrix p, Matrix q) throws ServiceException {
         try {
-            p = new Matrix(3,3);
-            q = new Matrix(3,3);
             DAOFactory daoFactory = DAOFactory.getInstance();
             MatrixDAO matrixDAO = daoFactory.getMatrixDAOImpl();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/matrix.txt";
             matrixDAO.createFromFile(p, new File(source));
             matrixDAO.createFromFile(q, new File(source));
-        } catch (DAOException | MatrixException e) {
+        } catch (DAOException e) {
             throw new ServiceException(e);
         }
         int pVertical = p.getVerticalSize();
@@ -29,7 +27,7 @@ public class MatrixSubdivider implements MatrixOperator{
         if (pVertical != qVertical || pHorizontal != qHorizontal) {
             throw new ServiceException("Not same matrix");
         }
-        Matrix result = null;
+        Matrix result;
         try {
             result = new Matrix(pVertical, pHorizontal);
             for (int i = 0; i < pVertical; i++) {

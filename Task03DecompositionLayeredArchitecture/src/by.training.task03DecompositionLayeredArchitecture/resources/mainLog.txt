@@ -18,3 +18,7 @@ java.lang.IllegalArgumentException: No enum constant CommandName.SF
 	at Controller.executeTask(Controller.java:17) [classes/:?]
 	at Runner.go(Runner.java:30) [classes/:?]
 	at Runner.main(Runner.java:57) [classes/:?]
+2021-06-17 15:35:13.167 [main] INFO  MultiplyCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:36:52.026 [main] INFO  MultiplyCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:40:59.803 [main] INFO  SummatorCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:41:08.496 [main] INFO  SubdividerCommandImpl - Method completeOperation(Matrix p, Matrix q) has been invoked

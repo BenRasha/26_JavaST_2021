@@ -12,14 +12,12 @@ public class MatrixMultiplicator implements MatrixOperator{
     @Override
     public Matrix completeOperation(Matrix p, Matrix q) throws ServiceException {
         try {
-            p = new Matrix(3,3);
-            q = new Matrix(3,3);
             DAOFactory daoFactory = DAOFactory.getInstance();
             MatrixDAO matrixDAO = daoFactory.getMatrixDAOImpl();
             String source = "src/by.training.task03DecompositionLayeredArchitecture/resources/matrix.txt";
             matrixDAO.createFromFile(p, new File(source));
             matrixDAO.createFromFile(q, new File(source));
-        } catch (DAOException | MatrixException e) {
+        } catch (DAOException e) {
             throw new ServiceException(e);
         }
         int vertical = p.getVerticalSize();
@@ -28,7 +26,7 @@ public class MatrixMultiplicator implements MatrixOperator{
         if (controlSize != q.getVerticalSize()) {
             throw new ServiceException("Incomplete matrices");
         }
-        Matrix result = null;
+        Matrix result;
         try {
             result = new Matrix(vertical, horizontal);
             for (int i = 0; i < vertical; i++) {
