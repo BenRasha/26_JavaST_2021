@@ -16,39 +16,6 @@
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
-        <Logger name="ArrayDAOImpl" level="error" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="MatrixDAOImpl" level="error" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="BubbleSort" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="InsertionSort" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="MergeSort" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="SelectionSort" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="ShakerSort" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="ShellSort" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="MatrixMultiplicator" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="MatrixSubdivider" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
-        <Logger name="MatrixSummator" level="info" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
         <Logger name="BubbleCommandImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
