@@ -4,25 +4,24 @@ import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
-public class CommandProviderTest {
+public class CommandArrayProviderTest {
 
-    private CommandProvider commandProvider = new CommandProvider();
+    private ArrayCommandProvider arrayCommandProvider = new ArrayCommandProvider();
 
     @DataProvider(name = "PositiveDataForCommandProviding")
     public Object[][] createDataForCommandProviding() {
         return new Object[][]{
-                {"bubble", new BubbleCommandImpl()},
-                {"insertion", new InsertionCommandImpl()},
-                {"shell", new ShellCommandImpl()},
-                {"multiply", new MultiplyCommandImpl()},
-                {"invalid", new WrongRequest()}
+                {"bubble", new BubbleCommandArrayImpl()},
+                {"insertion", new InsertionCommandArrayImpl()},
+                {"shell", new ShellCommandArrayImpl()},
+                {"multiply", new MultiplyCommandArrayImpl()},
         };
     }
 
     @Test(description = "Positive scenario for getting command from command provider", dataProvider = "PositiveDataForCommandProviding")
-    public void testGetCommand(String name, Command command) {
-        Command actual = commandProvider.getCommand(name);
-        Command expected = command;
+    public void testGetCommand(String name, CommandArray commandArray) {
+        CommandArray actual = arrayCommandProvider.getCommand(name);
+        CommandArray expected = commandArray;
         if (expected.equals(actual)) {
             assertTrue(true);
         }

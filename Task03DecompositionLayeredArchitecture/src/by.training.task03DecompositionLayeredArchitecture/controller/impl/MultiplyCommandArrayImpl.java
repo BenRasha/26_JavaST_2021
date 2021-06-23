@@ -1,9 +1,9 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class MultiplyCommandImpl implements Command{
+public class MultiplyCommandArrayImpl implements CommandMatrix {
 
-    static final Logger multiplyCommandImplLogger = LogManager.getLogger(MultiplyCommandImpl.class.getName());
+    static final Logger multiplyCommandImplLogger = LogManager.getLogger(MultiplyCommandArrayImpl.class.getName());
 
     /**
      * Fills two matrices from the file and multiplies them
@@ -11,24 +11,24 @@ public class MultiplyCommandImpl implements Command{
      * @return result Matrix of multiplying
      */
     @Override
-    public String execute(String request) {
+    public Matrix execute(String request) {
         Matrix firstM = null;
         Matrix secondM = null;
+        Matrix result = null;
         try {
             firstM = new Matrix(3,3);
             secondM = new Matrix(3,3);
         } catch (MatrixException e) {
             multiplyCommandImplLogger.error("Error creating matrices");
         }
-        String response = null;
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         MatrixOperator matrixMul = serviceFactory.getMatrixMultiplicator();
         try {
-            response = matrixMul.completeOperation(firstM, secondM).toString();
+            result = matrixMul.completeOperation(firstM, secondM);
             multiplyCommandImplLogger.info("Method completeOperation(Matrix p, Matrix q) has been invoked");
         } catch (ServiceException e) {
-            response = "Error during multiplying matrices";
+            multiplyCommandImplLogger.info("Error during multiplying matrices");
         }
-        return response;
+        return result;
     }
 }

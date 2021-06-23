@@ -12,7 +12,8 @@ public class Runner {
 
     private void go() {
         Scanner scanner = new Scanner(System.in);
-        Controller controller = new Controller();
+        ControllerArray controllerArray = new ControllerArray();
+        ControllerMatrix controllerMatrix = new ControllerMatrix();
         String request = null;
         boolean startMenu = true;
         while (startMenu) {
@@ -27,7 +28,7 @@ public class Runner {
                         if (request.equals("exit")) {
                             arrayFlag = false;
                         } else {
-                            System.out.println(controller.executeTask(request));
+                            System.out.println(controllerArray.executeTask(request));
                         }
                     }
                     break;
@@ -39,7 +40,7 @@ public class Runner {
                         if (request.equals("exit")) {
                             matrixFlag = false;
                         } else {
-                            System.out.println(controller.executeTask(request));
+                            System.out.println(controllerMatrix.executeTask(request));
                         }
                     }
                     break;

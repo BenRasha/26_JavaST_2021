@@ -1,9 +1,9 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class InsertionCommandImpl implements Command {
+public class InsertionCommandArrayImpl implements CommandArray {
 
-    static final Logger insertionCommandImplLogger = LogManager.getLogger(InsertionCommandImpl.class.getName());
+    static final Logger insertionCommandImplLogger = LogManager.getLogger(InsertionCommandArrayImpl.class.getName());
 
     /**
      * Fills array from file and if user inputs increasing - sorts in increasing way, if decreasing - in decreasing way.
@@ -12,9 +12,8 @@ public class InsertionCommandImpl implements Command {
      */
 
     @Override
-    public String execute(String request) {
+    public Array execute(String request) {
         Array array = new Array();
-        String response = null;
         String increasing = request.substring(request.indexOf(' ')).trim();
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         Sorting insertionSort = serviceFactory.getInsertionSort();
@@ -22,19 +21,15 @@ public class InsertionCommandImpl implements Command {
             if (increasing.equals("increasing")) {
                 insertionSort.sort(array, true);
                 insertionCommandImplLogger.info("Method sort(Array array, boolean isIncreasing has been invoked");
-                response = array.toString();
             } else if(increasing.equals("decreasing")) {
                 insertionSort.sort(array, false);
                 insertionCommandImplLogger.info("Method sort(Array array, boolean isIncreasing has been invoked");
-                response = array.toString();
             } else {
                 insertionCommandImplLogger.info("No such type of sort");
-                response = "No such type of sort";
             }
         } catch (ServiceException e) {
             insertionCommandImplLogger.info("Error during executing insertion sort");
-            response = "Error during executing insertion sort";
         }
-        return response;
+        return array;
     }
 }

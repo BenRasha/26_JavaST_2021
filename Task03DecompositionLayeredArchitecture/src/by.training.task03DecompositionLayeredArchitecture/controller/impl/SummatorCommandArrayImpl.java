@@ -1,9 +1,9 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class SummatorCommandImpl implements Command{
+public class SummatorCommandArrayImpl implements CommandMatrix {
 
-    static final Logger summatorCommandImplLogger = LogManager.getLogger(SummatorCommandImpl.class.getName());
+    static final Logger summatorCommandImplLogger = LogManager.getLogger(SummatorCommandArrayImpl.class.getName());
 
     /**
      * Fills two matrices from the file and multiplies them
@@ -11,7 +11,7 @@ public class SummatorCommandImpl implements Command{
      * @return result Matrix of sum two matrices
      */
     @Override
-    public String execute(String request) {
+    public Matrix execute(String request) {
         Matrix firstM = null;
         Matrix secondM = null;
         try {
@@ -20,16 +20,15 @@ public class SummatorCommandImpl implements Command{
         } catch (MatrixException e) {
             summatorCommandImplLogger.info("Error during creating matrices");
         }
-        String response;
+        Matrix result = null;
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         MatrixOperator matrixSum = serviceFactory.getMatrixSummator();
         try {
-            Matrix result = matrixSum.completeOperation(firstM, secondM);
+            result = matrixSum.completeOperation(firstM, secondM);
             summatorCommandImplLogger.info("Method completeOperation(Matrix p, Matrix q) has been invoked");
-            response = result.toString();
         } catch (ServiceException e) {
-            response = "Error during finding sum matrices";
+            summatorCommandImplLogger.info("Error during finding sum matrices");
         }
-        return response;
+        return result;
     }
 }

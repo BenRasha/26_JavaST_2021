@@ -1,9 +1,9 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class SubdividerCommandImpl implements Command{
+public class SubdividerCommandArrayImpl implements CommandMatrix {
 
-    static final Logger subdividerCommandImplLogger = LogManager.getLogger(SubdividerCommandImpl.class.getName());
+    static final Logger subdividerCommandImplLogger = LogManager.getLogger(SubdividerCommandArrayImpl.class.getName());
 
     /**
      * Fills two matrices from the file and multiplies them
@@ -11,7 +11,7 @@ public class SubdividerCommandImpl implements Command{
      * @return result Matrix of subdivision
      */
     @Override
-    public String execute(String request) {
+    public Matrix execute(String request) {
         Matrix firstM = null;
         Matrix secondM = null;
         try {
@@ -20,16 +20,15 @@ public class SubdividerCommandImpl implements Command{
         } catch (MatrixException e) {
             subdividerCommandImplLogger.info("Error during matrix creation");
         }
-        String response;
+        Matrix result = null;
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         MatrixOperator matrixSubdivider = serviceFactory.getMatrixSubdivider();
         try {
-            Matrix result = matrixSubdivider.completeOperation(firstM, secondM);
+            result = matrixSubdivider.completeOperation(firstM, secondM);
             subdividerCommandImplLogger.info("Method completeOperation(Matrix p, Matrix q) has been invoked");
-            response = result.toString();
         } catch (ServiceException e) {
-            response = "Error during find the residual of matrices";
+            subdividerCommandImplLogger.info("Error during find the residual of matrices");
         }
-        return response;
+        return result;
     }
 }

@@ -16,34 +16,34 @@
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
-        <Logger name="BubbleCommandImpl" level="info" additivity="true">
+        <Logger name="BubbleCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="InsertionCommandImpl" level="info" additivity="true">
+        <Logger name="InsertionCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="MergeCommandImpl" level="info" additivity="true">
+        <Logger name="MergeCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="SelectionCommandImpl" level="info" additivity="true">
+        <Logger name="SelectionCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="ShakerCommandImpl" level="info" additivity="true">
+        <Logger name="ShakerCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="ShellCommandImpl" level="info" additivity="true">
+        <Logger name="ShellCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="MultiplyCommandImpl" level="info" additivity="true">
+        <Logger name="MultiplyCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="SubdividerCommandImpl" level="info" additivity="true">
+        <Logger name="SubdividerCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="SummatorCommandImpl" level="info" additivity="true">
+        <Logger name="SummatorCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="CommandProvider" level="info" additivity="true">
+        <Logger name="ArrayCommandProvider" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
     </Loggers>
