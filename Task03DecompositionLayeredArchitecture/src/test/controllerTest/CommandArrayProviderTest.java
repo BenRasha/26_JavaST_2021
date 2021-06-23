@@ -14,7 +14,7 @@ public class CommandArrayProviderTest {
                 {"bubble", new BubbleCommandArrayImpl()},
                 {"insertion", new InsertionCommandArrayImpl()},
                 {"shell", new ShellCommandArrayImpl()},
-                {"multiply", new MultiplyCommandArrayImpl()},
+                {"multiply", new MultiplyCommandMatrixImpl()},
         };
     }
 

@@ -34,13 +34,13 @@
         <Logger name="ShellCommandArrayImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="MultiplyCommandArrayImpl" level="info" additivity="true">
+        <Logger name="MultiplyCommandMatrixImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="SubdividerCommandArrayImpl" level="info" additivity="true">
+        <Logger name="SubdividerCommandMatrixImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
-        <Logger name="SummatorCommandArrayImpl" level="info" additivity="true">
+        <Logger name="SummatorCommandMatrixImpl" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
         <Logger name="ArrayCommandProvider" level="info" additivity="true">

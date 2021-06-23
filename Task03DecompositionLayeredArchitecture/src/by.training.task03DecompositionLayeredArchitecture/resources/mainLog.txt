@@ -2,13 +2,13 @@
 2021-06-13 16:30:42.301 [main] INFO  BubbleCommandArrayImpl - Method sort(Array array, boolean isIncreasing has been invoked
 2021-06-13 16:31:02.929 [main] INFO  MatrixSummator - Method createFromFile(Matrix matrix,File file) has been invoked
 2021-06-13 16:31:02.929 [main] INFO  MatrixSummator - Method createFromFile(Matrix matrix,File file) has been invoked
-2021-06-13 16:31:02.929 [main] INFO  SummatorCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-13 16:31:02.929 [main] INFO  SummatorCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
 2021-06-13 16:31:14.916 [main] INFO  MatrixSubdivider - Method createFromFile(Matrix matrix,File file) has been invoked
 2021-06-13 16:31:14.918 [main] INFO  MatrixSubdivider - Method createFromFile(Matrix matrix,File file) has been invoked
-2021-06-13 16:31:14.921 [main] INFO  SubdividerCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-13 16:31:14.921 [main] INFO  SubdividerCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
 2021-06-16 15:08:03.220 [main] INFO  SelectionCommandArrayImpl - Method sort(Array array, boolean isIncreasing has been invoked
 2021-06-16 15:08:14.640 [main] INFO  BubbleCommandArrayImpl - Method sort(Array array, boolean isIncreasing has been invoked
-2021-06-16 15:08:30.335 [main] INFO  MultiplyCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-16 15:08:30.335 [main] INFO  MultiplyCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
 2021-06-16 15:10:01.044 [main] INFO  BubbleCommandArrayImpl - No such type of sort
 2021-06-16 15:10:14.292 [main] INFO  ArrayCommandProvider - Wrong request
 java.lang.IllegalArgumentException: No enum constant CommandName.SF
@@ -18,10 +18,10 @@ java.lang.IllegalArgumentException: No enum constant CommandName.SF
 	at ControllerArray.executeTask(ControllerArray.java:17) [classes/:?]
 	at Runner.go(Runner.java:30) [classes/:?]
 	at Runner.main(Runner.java:57) [classes/:?]
-2021-06-17 15:35:13.167 [main] INFO  MultiplyCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
-2021-06-17 15:36:52.026 [main] INFO  MultiplyCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
-2021-06-17 15:40:59.803 [main] INFO  SummatorCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
-2021-06-17 15:41:08.496 [main] INFO  SubdividerCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:35:13.167 [main] INFO  MultiplyCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:36:52.026 [main] INFO  MultiplyCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:40:59.803 [main] INFO  SummatorCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-17 15:41:08.496 [main] INFO  SubdividerCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
 2021-06-23 19:57:08.643 [main] INFO  BubbleCommandArrayImpl - Method sort(Array array, boolean isIncreasing has been invoked
 2021-06-23 19:57:26.674 [main] INFO  SelectionCommandArrayImpl - Method sort(Array array, boolean isIncreasing has been invoked
 2021-06-23 19:57:48.047 [main] INFO  ArrayCommandProvider - Wrong request
@@ -32,6 +32,6 @@ java.lang.IllegalArgumentException: No enum constant CommandName.MATRIX
 	at ControllerArray.executeTask(ControllerArray.java:17) [classes/:?]
 	at Runner.go(Runner.java:42) [classes/:?]
 	at Runner.main(Runner.java:57) [classes/:?]
-2021-06-23 19:58:56.363 [main] INFO  SummatorCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
-2021-06-23 19:59:03.566 [main] INFO  MultiplyCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
-2021-06-23 19:59:10.314 [main] INFO  SubdividerCommandArrayImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-23 19:58:56.363 [main] INFO  SummatorCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-23 19:59:03.566 [main] INFO  MultiplyCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked
+2021-06-23 19:59:10.314 [main] INFO  SubdividerCommandMatrixImpl - Method completeOperation(Matrix p, Matrix q) has been invoked

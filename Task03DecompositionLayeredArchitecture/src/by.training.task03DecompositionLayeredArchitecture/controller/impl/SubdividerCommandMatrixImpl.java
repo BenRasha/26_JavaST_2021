@@ -1,9 +1,9 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class SubdividerCommandArrayImpl implements CommandMatrix {
+public class SubdividerCommandMatrixImpl implements CommandMatrix {
 
-    static final Logger subdividerCommandImplLogger = LogManager.getLogger(SubdividerCommandArrayImpl.class.getName());
+    static final Logger subdividerCommandImplLogger = LogManager.getLogger(SubdividerCommandMatrixImpl.class.getName());
 
     /**
      * Fills two matrices from the file and multiplies them

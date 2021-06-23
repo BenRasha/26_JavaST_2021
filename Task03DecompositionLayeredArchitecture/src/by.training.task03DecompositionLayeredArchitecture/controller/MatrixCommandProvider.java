@@ -11,9 +11,9 @@ public class MatrixCommandProvider {
     private final Map<CommandName, CommandMatrix> repository = new HashMap<>();
 
     MatrixCommandProvider() {
-        repository.put(CommandName.MULTIPLY, new MultiplyCommandArrayImpl());
-        repository.put(CommandName.SUBDIVIDE, new SubdividerCommandArrayImpl());
-        repository.put(CommandName.SUM, new SummatorCommandArrayImpl());
+        repository.put(CommandName.MULTIPLY, new MultiplyCommandMatrixImpl());
+        repository.put(CommandName.SUBDIVIDE, new SubdividerCommandMatrixImpl());
+        repository.put(CommandName.SUM, new SummatorCommandMatrixImpl());
     }
 
     /**
