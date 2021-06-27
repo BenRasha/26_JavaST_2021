@@ -1,12 +1,8 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class DriveAutomobileImpl implements Command{
 
-    static final Logger driveAutomobileImplLogger = LogManager.getLogger(DriveAutomobileImpl.class.getName());
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("text", Locale.getDefault());
 
     @Override

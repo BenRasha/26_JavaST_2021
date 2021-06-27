@@ -1,12 +1,8 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class CommandProvider {
 
-    static final Logger commandProviderLogger = LogManager.getLogger(CommandProvider.class.getName());
     private final Map<CommandName, Command> repository = new HashMap<>();
 
     CommandProvider() {

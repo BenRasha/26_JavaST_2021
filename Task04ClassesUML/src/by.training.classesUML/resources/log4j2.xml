@@ -16,5 +16,14 @@
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
+        <Logger name="ChangeWheelImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="CreateAutomobile" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="Runner" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
     </Loggers>
 </Configuration>
