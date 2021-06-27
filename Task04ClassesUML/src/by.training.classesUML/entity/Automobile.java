@@ -1,9 +1,8 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Automobile {
 
-    private List<Wheel> wheels = new ArrayList<>(4);
+    private List<Wheel> wheels;
     private Engine engine;
     private String brand;
 
@@ -45,8 +44,8 @@ public class Automobile {
     public String toString() {
         return "Automobile{" +
                 "wheels=" + wheels +
-                "\n engine=" + engine +
-                "\n brand='" + brand + '\'' +
+                "\nengine=" + engine +
+                "\nbrand='" + brand + '\'' +
                 '}';
     }
 }

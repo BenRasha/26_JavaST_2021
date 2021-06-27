@@ -1,26 +1,57 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Runner {
 
-    private static final String INFO = "Choose from following options\n" +
-            "1.Change_Wheel\n" +
-            "2.Charge_Engine\n" +
-            "3.Show_Brand\n" +
-            "4.Drive_Automobile\n" +
-            "5.Exit";
+    private MessageManager messageManager;
+    static final Logger runnerLogger = LogManager.getLogger(Runner.class.getName());
 
-    public void go() {
-        Scanner scanner = new Scanner(System.in);
+    private void languageSelection() {
+        System.out.println("1.Ru\n2.En\ninvalid input - En");
+        Scanner intScanner = new Scanner(System.in);
+        try {
+            int action = intScanner.nextInt();
+            switch (action) {
+                case 1:
+                    messageManager = MessageManager.RU;
+                    break;
+                case 2:
+                    messageManager = MessageManager.EN;
+                    break;
+                default:
+                    messageManager = MessageManager.EN;
+                    break;
+            }
+        } catch (InputMismatchException e) {
+            runnerLogger.info("Illegal form of input", e);
+        }
+        Locale.setDefault(messageManager.getBundle().getLocale());
+        System.out.println(messageManager.getString("menu.options"));
+    }
+
+    private void go(){
+        languageSelection();
         Controller controller = new Controller();
-        String request = null;
-        boolean startMenu = true;
-        while (startMenu) {
-            System.out.println(INFO);
-            request = scanner.nextLine().toLowerCase();
-            if (request.equals("exit")) {
-                startMenu = false;
+        System.out.println(messageManager.getString("go.start"));
+        CreateAutomobile createAutomobile = new CreateAutomobile();
+        Automobile automobile;
+        automobile = createAutomobile.createAutomobile();
+        System.out.println(automobile.toString());
+        boolean flag = true;
+        String request = "";
+        Scanner stringScanner = new Scanner(System.in);
+        while (flag) {
+            request = stringScanner.nextLine().toLowerCase().trim();
+            if (request.equals(messageManager.getString("exit"))) {
+                flag = false;
+            } else if (request.equals(messageManager.getString("change_locale"))) {
+                languageSelection();
             } else {
-                System.out.println(controller.executeTask(request));
+                System.out.println(controller.executeTask(request, automobile));
             }
         }
     }

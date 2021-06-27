@@ -31,7 +31,7 @@ public class DataGeneratorDAOImpl implements DataGenerator{
     @Override
     public void writeWheelIntoFile(String source, Wheel wheel) throws DAOException {
         File fileToWrite = new File(source);
-        try (FileWriter fileWriter = new FileWriter(fileToWrite, true)){
+        try (FileWriter fileWriter = new FileWriter(fileToWrite,true)){
             fileWriter.write(wheel.getSize() + " " + wheel.getDiameter() + " " + wheel.isRepaired() + "\n");
         } catch (IOException e) {
             throw new DAOException(e);
@@ -41,7 +41,7 @@ public class DataGeneratorDAOImpl implements DataGenerator{
     @Override
     public void writeEngineIntoFile(String source, Engine engine) throws DAOException {
         File fileToWrite = new File(source);
-        try (FileWriter fileWriter = new FileWriter(fileToWrite,true)) {
+        try (FileWriter fileWriter = new FileWriter(fileToWrite, true)) {
             fileWriter.write(engine.getBrand() + " " + engine.getPower() + " " + engine.isFull() + "\n");
         } catch (IOException exception) {
             throw new DAOException(exception);

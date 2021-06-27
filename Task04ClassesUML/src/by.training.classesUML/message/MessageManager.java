@@ -19,4 +19,7 @@ public enum MessageManager {
         return bundle.getString(key);
     }
 
+    public ResourceBundle getBundle() {
+        return bundle;
+    }
 }

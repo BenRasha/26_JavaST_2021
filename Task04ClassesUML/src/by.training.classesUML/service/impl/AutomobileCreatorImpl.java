@@ -42,7 +42,6 @@ public class AutomobileCreatorImpl implements AutomobileCreator{
     @Override
     public void chargeEngine(Automobile automobile) {
         if (!automobile.getEngine().isFull()) {
-            System.out.println("Charging your engine");
             automobile.getEngine().setFull(true);
         }
     }
