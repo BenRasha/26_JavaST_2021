@@ -1,0 +1,3 @@
+public enum CommandName {
+    CREATE_PYRAMID, COUNT_AREA, COUNT_CAPACITY, WRONG_REQUEST;
+}
