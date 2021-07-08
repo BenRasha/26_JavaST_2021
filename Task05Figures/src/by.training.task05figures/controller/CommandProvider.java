@@ -10,7 +10,6 @@ public class CommandProvider {
     private final Map<CommandName, Command> repository = new HashMap<>();
 
     CommandProvider() {
-        repository.put(CommandName.CREATE_PYRAMID, new CreatePyramidImpl());
         repository.put(CommandName.COUNT_AREA, new CountAreaImpl());
         repository.put(CommandName.COUNT_CAPACITY, new CountCapacityImpl());
         repository.put(CommandName.WRONG_REQUEST, new WrongRequest());

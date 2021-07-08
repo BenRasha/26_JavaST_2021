@@ -1,7 +1,7 @@
 public class WrongRequest implements Command{
     @Override
-    public Pyramid execute(String request) {
+    public double execute(String request, Pyramid pyramid) {
         System.out.println("Not existing command");
-        return null;
+        return 0;
     }
 }

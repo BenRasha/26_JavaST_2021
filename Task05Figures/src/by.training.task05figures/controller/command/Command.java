@@ -1,4 +1,4 @@
 public interface Command {
 
-    public Pyramid execute(String request);
+    public double execute(String request, Pyramid pyramid);
 }

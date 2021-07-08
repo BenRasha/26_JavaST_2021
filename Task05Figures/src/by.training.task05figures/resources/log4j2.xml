@@ -16,7 +16,19 @@
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
-        <Logger name="PyramidRepository" level="info" additivity="true">
+        <Logger name="EventManager" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="CountAreaImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="CountCapacityImpl" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="PyramidStorage" level="info" additivity="true">
+            <AppenderRef ref="mainFile"/>
+        </Logger>
+        <Logger name="CommandProvider" level="info" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>
     </Loggers>
