@@ -7,8 +7,12 @@ import java.util.Scanner;
 
 public class Runner {
 
-    private MessageManager messageManager;
+    private static MessageManager messageManager;
     static final Logger runnerLogger = LogManager.getLogger(Runner.class.getName());
+
+    public static MessageManager getMessageManager() {
+        return messageManager;
+    }
 
     private void languageSelection() {
         System.out.println("1.Ru\n2.En\ninvalid input - En");
@@ -29,8 +33,6 @@ public class Runner {
         } catch (InputMismatchException e) {
             runnerLogger.info("Illegal form of input", e);
         }
-        Locale.setDefault(messageManager.getBundle().getLocale());
-        System.out.println(messageManager.getString("menu.options"));
     }
 
     private void go(){
@@ -41,6 +43,8 @@ public class Runner {
         Automobile automobile;
         automobile = createAutomobile.createAutomobile();
         System.out.println(automobile.toString());
+        runnerLogger.info(automobile.toString());
+        System.out.println(messageManager.getString("menu.options"));
         boolean flag = true;
         String request = "";
         Scanner stringScanner = new Scanner(System.in);

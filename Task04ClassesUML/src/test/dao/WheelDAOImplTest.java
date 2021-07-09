@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class WheelDAOImplTest {
 
@@ -16,11 +17,23 @@ public class WheelDAOImplTest {
         };
     }
 
+    @DataProvider(name = "NegativeDataForReadingWheelsFromFile")
+    public Object[][] negativeCreateDataForReadingWheelsFromFile() {
+        return new Object[][] {
+                {new File("not existing")}
+        };
+    }
+
     @Test(description = "Positive scenario for reading wheel from file", dataProvider = "PositiveDataForReadingWheelsFromFile")
     public void testReadWheelFromFile(File file, Wheel a) throws DAOException {
         Wheel actual = wheelDAO.createWheelFromFile(file);
         Wheel expected = a;
         assertEquals(actual, expected);
+    }
+
+    @Test(description = "Negative scenario for reading wheels from file", dataProvider = "NegativeDataForReadingWheelsFromFile", expectedExceptions = DAOException.class)
+    public void negativeReadWheels(File file) throws DAOException {
+        Wheel actual = wheelDAO.createWheelFromFile(file);
     }
 
 }

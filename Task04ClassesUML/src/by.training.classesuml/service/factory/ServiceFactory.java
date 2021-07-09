@@ -1,7 +1,7 @@
 public class ServiceFactory {
 
     private static final ServiceFactory instance = new ServiceFactory();
-    private final AutomobileCreator automobileCreator = new AutomobileCreatorImpl();
+    private final AutomobileService automobileService = new AutomobileServiceImpl();
     private final GenerateToFileThenRead<Wheel> wheelGenerateThenReadGenerator = new WheelGenerateThenReadImpl();
     private final GenerateToFileThenRead<Engine> engineGenerateThenRead = new EngineGenerateThenReadImpl();
 
@@ -11,8 +11,8 @@ public class ServiceFactory {
         return instance;
     }
 
-    public AutomobileCreator getAutomobileCreator() {
-        return automobileCreator;
+    public AutomobileService getAutomobileCreator() {
+        return automobileService;
     }
 
     public GenerateToFileThenRead<Wheel> getWheelGenerateThenReadGenerator() {

@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.List;
 
-public class AutomobileCreatorImpl implements AutomobileCreator{
+public class AutomobileServiceImpl implements AutomobileService {
 
     @Override
     public Automobile createAutomobile(List<Wheel>wheels, Engine engine) {
@@ -11,7 +11,7 @@ public class AutomobileCreatorImpl implements AutomobileCreator{
     }
 
     @Override
-    public boolean drive(Automobile automobile) {
+    public boolean isDrivable(Automobile automobile) {
         if (wheelsCheck(automobile) && automobile.getEngine().isFull()) {
             return true;
         } else {
