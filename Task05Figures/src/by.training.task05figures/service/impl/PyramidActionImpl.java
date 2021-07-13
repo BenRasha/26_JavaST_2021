@@ -3,7 +3,7 @@ import java.util.List;
 
 import static java.lang.Math.*;
 
-public class PyramidActionImpl implements FigureAction{
+public class PyramidActionImpl implements FigureAction<Pyramid>{
 
     @Override
     public List<Pyramid> createFromFile(File file) throws ServiceException {
@@ -19,7 +19,7 @@ public class PyramidActionImpl implements FigureAction{
     }
 
     @Override
-    public double countArea(AbstractFigure figure) throws ServiceException {
+    public double countArea(AbstractFigure figure) {
         AbstractFigure.Dot a1a2 = countNewDot(figure.getDots().get(0), figure.getDots().get(1));
         AbstractFigure.Dot a1a3 = countNewDot(figure.getDots().get(0), figure.getDots().get(2));
         //вектор нормали
@@ -42,7 +42,7 @@ public class PyramidActionImpl implements FigureAction{
     }
 
     @Override
-    public double countCapacity(AbstractFigure figure) throws ServiceException {
+    public double countCapacity(AbstractFigure figure) {
         AbstractFigure.Dot a1a2 = countNewDot(figure.getDots().get(0), figure.getDots().get(1));
         AbstractFigure.Dot a1a3 = countNewDot(figure.getDots().get(0), figure.getDots().get(2));
         AbstractFigure.Dot a1a4 = countNewDot(figure.getDots().get(0), figure.getDots().get(3));
