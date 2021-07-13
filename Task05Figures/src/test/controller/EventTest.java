@@ -21,7 +21,7 @@ public class EventTest {
 
     @Test(description = "Positive scenario for updating area")
     public void updateArea() {
-        for (Pyramid pyramid : PyramidStorage.getStorage().getAll()) {
+        for (Pyramid pyramid : pyramids) {
             double actual = registrator.countArea(pyramid);
             double expected = controller.executeTask("count_area", pyramid);
             assertEquals(expected, actual);
@@ -30,7 +30,7 @@ public class EventTest {
 
     @Test(description = "Positive scenario for updating capacity")
     public void updateCapacity() {
-        for (Pyramid pyramid : PyramidStorage.getStorage().getAll()) {
+        for (Pyramid pyramid : pyramids) {
             double actual = registrator.countCapacity(pyramid);
             double expected = controller.executeTask("count_capacity", pyramid);
             assertEquals(expected, actual, 0.01);
