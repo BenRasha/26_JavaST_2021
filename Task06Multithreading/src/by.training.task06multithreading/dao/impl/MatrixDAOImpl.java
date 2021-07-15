@@ -32,4 +32,17 @@ public class MatrixDAOImpl implements MatrixDAO {
         }
         return matrix;
     }
+
+    @Override
+    public int getNumberOfThreads(File sizes) throws DAOException {
+        int result;
+        try (Scanner scanner = new Scanner(new FileReader(sizes))) {
+            String[] numbers;
+            numbers = scanner.nextLine().split(SPACE);
+            result = Integer.parseInt(numbers[1]);
+        } catch (FileNotFoundException exception) {
+            throw new DAOException(exception);
+        }
+        return result;
+    }
 }
