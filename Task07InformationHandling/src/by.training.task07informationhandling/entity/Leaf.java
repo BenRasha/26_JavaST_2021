@@ -3,9 +3,14 @@ import java.util.Objects;
 
 public class Leaf implements TextComponent {
 
-    private String symbol;
+    private char symbol;
+    private TextPartType type;
 
-    public Leaf(String symbol) {
+    public Leaf(TextPartType type) {
+        this.type = type;
+    }
+
+    public void setSymbol(char symbol) {
         this.symbol = symbol;
     }
 
@@ -21,7 +26,7 @@ public class Leaf implements TextComponent {
 
     @Override
     public TextPartType getType() {
-        return TextPartType.SYMBOL;
+        return type;
     }
 
     @Override
@@ -39,16 +44,16 @@ public class Leaf implements TextComponent {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Leaf leaf = (Leaf) o;
-        return Objects.equals(symbol, leaf.symbol);
+        return symbol == leaf.symbol && type == leaf.type;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(symbol);
+        return Objects.hash(symbol, type);
     }
 
     @Override
     public String toString() {
-        return symbol;
+        return String.valueOf(symbol);
     }
 }

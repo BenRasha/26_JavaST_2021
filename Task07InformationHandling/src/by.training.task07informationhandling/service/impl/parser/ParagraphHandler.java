@@ -1,21 +1,27 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ParagraphHandler extends BaseHandler {
+public class ParagraphHandler implements ParseHandler {
 
-    private static final String SENTENCE_EXPRESSION = "[A-Z].*?[\\.\\?\\!]{1}";
+    private ParseHandler handler;
+    private static final String PARAGRAPH_PATTERN = "[^\\t]+";
 
     @Override
-    public TextComponent parse(String part) {
-        TextComponent paragraphRoot = new TextComposite(TextPartType.PARAGRAPH);
-        Pattern pattern = Pattern.compile(SENTENCE_EXPRESSION);
+    public void handle(String part, TextComponent component) {
+        Pattern pattern = Pattern.compile(PARAGRAPH_PATTERN);
         Matcher matcher = pattern.matcher(part);
         while (matcher.find()) {
-            if (next != null) {
-                paragraphRoot.addChild(next.parse(part.substring(matcher.start(), matcher.end())));
+            String paragraph = matcher.group();
+            TextComponent paragraphRoot = new TextComposite(TextPartType.PARAGRAPH);
+            component.addChild(paragraphRoot);
+            if (handler != null) {
+                handler.handle(paragraph, paragraphRoot);
             }
         }
-        return paragraphRoot;
     }
 
+    @Override
+    public void setHandler(ParseHandler handler) {
+        this.handler = handler;
+    }
 }

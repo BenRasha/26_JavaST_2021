@@ -57,7 +57,7 @@ public class ReversePolishNotation {
         StringBuilder result = new StringBuilder();
         StringTokenizer stringTokenizer = new StringTokenizer(expression, SHIFT_LEFT + SHIFT_RIGHT + OPERATORS + BRACKETS, true);
         while (stringTokenizer.hasMoreTokens()) {
-            String token = stringTokenizer.nextToken();
+            String token = stringTokenizer.nextToken().trim();
             if (token.equals(">") || token.equals("<")) {
                 token += stringTokenizer.nextToken();
             }

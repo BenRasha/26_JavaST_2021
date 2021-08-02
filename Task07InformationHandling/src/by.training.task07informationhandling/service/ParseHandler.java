@@ -1,6 +1,6 @@
 public interface ParseHandler {
 
-    TextComponent parse(String part);
-    void setNext(ParseHandler handler);
+    void handle(String part, TextComponent component);
+    void setHandler(ParseHandler handler);
 
 }

@@ -1,7 +1,6 @@
 public class ServiceFactory {
 
     private static final ServiceFactory instance = new ServiceFactory();
-    private final ParseHandler textParser = new TextHandler();
     private final ParseHandler sentenceParser = new SentenceHandler();
     private final ParseHandler paragraphParser = new ParagraphHandler();
 
@@ -19,7 +18,4 @@ public class ServiceFactory {
         return sentenceParser;
     }
 
-    public ParseHandler getTextParser() {
-        return textParser;
-    }
 }
