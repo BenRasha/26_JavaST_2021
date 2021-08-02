@@ -64,7 +64,6 @@ public class Calculator {
 
     public int calculate() {
         Context context = new Context();
-        System.out.println(expressionList);
         for (AbstractMathExpression mathExpression : expressionList) {
             mathExpression.interpret(context);
         }
