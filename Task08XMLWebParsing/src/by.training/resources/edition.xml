@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.training.by/entities"
+        xsi:schemaLocation="http://www.training.by/entities  edition.xsd">
+    <paper id="345">
+        <title>Sport News</title>
+        <type>Booklet</type>
+        <monthly>Monthly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>150</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="2678">
+        <title>Daily News</title>
+        <type>Newspaper</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>800</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="020421">
+        <title>BBC News</title>
+        <type>Newspaper</type>
+        <monthly>Monthly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>500</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="123485">
+        <title>Cosmopolitan</title>
+        <type>Magazine</type>
+        <monthly>Yearly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>400</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="1234124">
+        <title>Naviny</title>
+        <type>Newspaper</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>450</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="123125">
+        <title>GQ</title>
+        <type>Magazine</type>
+        <monthly>Yearly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>500</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="04359346">
+        <title>Loudwire</title>
+        <type>Magazine</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>200</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="45747345">
+        <title>Sun</title>
+        <type>Newspaper</type>
+        <monthly>Monthly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>700</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="12395235">
+        <title>Daily News</title>
+        <type>Newspaper</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>350</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="9379543">
+        <title>Sports</title>
+        <type>Booklet</type>
+        <monthly>Yearly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>500</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="112341">
+        <title>Modern Technology</title>
+        <type>Newspaper</type>
+        <monthly>Monthly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>670</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="14572349">
+        <title>Euronews</title>
+        <type>Newspaper</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>200</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="82199532">
+        <title>Modern World</title>
+        <type>Magazine</type>
+        <monthly>Monthly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>650</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="12938432">
+        <title>All About Music</title>
+        <type>Booklet</type>
+        <monthly>Yearly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>900</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+    <paper id="12388">
+        <title>Belaya Niva</title>
+        <type>Newspaper</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>false</colour>
+            <capacity>200</capacity>
+            <cover>Paper</cover>
+        </chars>
+    </paper>
+    <paper id="123874">
+        <title>Suburban</title>
+        <type>Magazine</type>
+        <monthly>Weekly</monthly>
+        <chars>
+            <colour>true</colour>
+            <capacity>300</capacity>
+            <cover>Glossy</cover>
+        </chars>
+    </paper>
+</papers>

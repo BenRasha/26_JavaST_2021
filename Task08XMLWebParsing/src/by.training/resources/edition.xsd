@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.training.by/entities"
+        xmlns:tns="http://www.training.by/entities"
+        elementFormDefault="qualified">
+    <element name="papers">
+        <complexType>
+            <sequence>
+                <element name="paper"
+                         type="tns:Paper"
+                         minOccurs="1"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="paper" type="tns:Paper" abstract="true"/>
+
+    <complexType name="Paper">
+        <sequence>
+            <element name="title" type="string"/>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Newspaper"/>
+                        <enumeration value="Magazine"/>
+                        <enumeration value="Booklet"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="monthly">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Weekly"/>
+                        <enumeration value="Monthly"/>
+                        <enumeration value="Yearly"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="chars" type="tns:Char"/>
+        </sequence>
+        <attribute name="id" type="string" use="required"/>
+    </complexType>
+
+    <complexType name="Char">
+        <sequence>
+            <element name="colour" type="boolean"/>
+            <element name="capacity">
+                <simpleType>
+                    <restriction base="positiveInteger">
+                        <minInclusive value="1"/>
+                        <maxInclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="cover" default="Paper">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="Glossy"/>
+                        <enumeration value="Paper"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+</schema>
