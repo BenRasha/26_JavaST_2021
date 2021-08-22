@@ -3,22 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap-4.3.1-dist/css/bootstrap.css">
     <title>Task08XMLWebParsing</title>
 </head>
 <body>
+<div style="text-align: center;">
 <h3>This is a XML parser page</h3>
-<form action="XMLServlet" method="post" enctype="multipart/form-data">
-    <input required="required" type="file" name="xmlFile"><br>
-    <p>
-        <mark>Select type of parser</mark>
-    </p>
-    <input type="radio" id="DOM" name="radioButton" value="DOM">
-    <label for="DOM">DOM</label><br>
-    <input type="radio" id="SAX" name="radioButton" value="SAX">
-    <label for="SAX">SAX</label><br>
-    <input type="radio" id="STAX" name="radioButton" value="StAX">
-    <label for="STAX">StAX</label><br>
-    <input type="submit" value="Parse">
-</form>
+    <form method="post" action="upload" enctype="multipart/form-data">
+        Select file to upload: <input type="file" name="file" size="60" /><br />
+        <br />
+        <select name="parseType" title="Parser type">
+            <option value="dom">DOM</option>
+            <option value="sax">SAX</option>
+            <option value="stax">StAX</option>
+        </select>
+        <input type="submit" name="Parse">
+    </form>
+<script src="assets/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+</div>
 </body>
 </html>
