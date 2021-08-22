@@ -16,9 +16,6 @@
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
-        <Logger name="PeriodicalErrorHandler" level="fatal" additivity="true">
-            <AppenderRef ref="mainFile"/>
-        </Logger>
         <Logger name="CommandProvider" level="error" additivity="true">
             <AppenderRef ref="mainFile"/>
         </Logger>

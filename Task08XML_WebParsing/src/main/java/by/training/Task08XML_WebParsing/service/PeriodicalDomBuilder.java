@@ -38,7 +38,7 @@ public class PeriodicalDomBuilder extends AbstractPeriodicalBuilder {
     }
 
     @Override
-    public void buildSetStudents(String fileName) throws ServiceException {
+    public void buildSetPeriodicals(String fileName) throws ServiceException {
         Document doc;
         try {
             doc = docBuilder.parse(fileName);

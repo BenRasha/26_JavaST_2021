@@ -22,6 +22,6 @@ public abstract class AbstractPeriodicalBuilder {
         return periodicals;
     }
 
-    public abstract void buildSetStudents(String fileName) throws ServiceException;
+    public abstract void buildSetPeriodicals(String fileName) throws ServiceException;
 
 }

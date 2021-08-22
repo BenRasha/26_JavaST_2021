@@ -17,7 +17,7 @@ public class SaxPrinter implements Command {
         AbstractPeriodicalBuilder builder = null;
         try {
             builder = PeriodicalBuilderFactory.createPeriodicalBuilder("sax");
-            builder.buildSetStudents(fileName);
+            builder.buildSetPeriodicals(fileName);
         } catch (ServiceException exception) {
             saxPrinterLogger.error(exception);
         }

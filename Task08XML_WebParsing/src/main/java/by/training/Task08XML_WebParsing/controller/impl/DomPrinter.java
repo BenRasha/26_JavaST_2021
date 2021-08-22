@@ -17,7 +17,7 @@ public class DomPrinter implements Command {
         AbstractPeriodicalBuilder builder = null;
         try {
             builder = PeriodicalBuilderFactory.createPeriodicalBuilder("dom");
-            builder.buildSetStudents(fileName);
+            builder.buildSetPeriodicals(fileName);
         } catch (ServiceException exception) {
             domPrinterLogger.error(exception);
         }

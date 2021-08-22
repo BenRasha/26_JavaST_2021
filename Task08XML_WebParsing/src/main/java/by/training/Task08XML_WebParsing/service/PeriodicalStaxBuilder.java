@@ -28,7 +28,7 @@ public class PeriodicalStaxBuilder extends AbstractPeriodicalBuilder {
     }
 
     @Override
-    public void buildSetStudents(String fileName) throws ServiceException {
+    public void buildSetPeriodicals(String fileName) throws ServiceException {
         XMLStreamReader reader;
         String name;
         try(FileInputStream inputStream = new FileInputStream(new File(fileName))) {

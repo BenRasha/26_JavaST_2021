@@ -17,7 +17,7 @@ public class StaxPrinter implements Command {
         AbstractPeriodicalBuilder builder = null;
         try {
             builder = PeriodicalBuilderFactory.createPeriodicalBuilder("stax");
-            builder.buildSetStudents(fileName);
+            builder.buildSetPeriodicals(fileName);
         } catch (ServiceException exception) {
             staxPrinterLogger.error(exception);
         }
